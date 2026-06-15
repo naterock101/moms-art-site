@@ -1,0 +1,347 @@
+<!-- @dsCard group="Artist Website" viewport="1440x900" name="Gallery" subtitle="Full interactive gallery — filter, lightbox, about, contact" -->
+<!-- @startingPoint section="Artist Portfolio" subtitle="Complete gallery website for visual artists" viewport="1440x900" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosario Levine</title>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--color-bg, #0C0B09);
+  color: var(--color-text-1, #EDE8E0);
+  font-family: var(--font-ui, 'DM Sans', sans-serif);
+  overflow: hidden;
+}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; padding: 0; font: inherit; color: inherit; }
+img { display: block; }
+input, textarea { font: inherit; outline: none; }
+
+.gallery-grid {
+  display: grid;
+  gap: 3px;
+  padding: 3px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 640px)  { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.artwork-card { position: relative; aspect-ratio: 1/1; overflow: hidden; cursor: pointer; background: var(--color-surface, #161412); }
+.artwork-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(0.25,0.46,0.45,0.94); }
+.artwork-card:hover img { transform: scale(1.04); }
+.artwork-card .ov { position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,11,9,.80) 0%, transparent 55%); opacity: 0; transition: opacity 300ms ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; }
+.artwork-card:hover .ov { opacity: 1; }
+.artwork-card .ov-info { transform: translateY(7px); transition: transform 300ms ease; }
+.artwork-card:hover .ov-info { transform: translateY(0); }
+
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+.fade-page { animation: fadeIn 300ms ease both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+const { useState, useEffect, useCallback } = React;
+
+/* ─── Data ─────────────────────────────────────────────────────────── */
+const ARTWORKS = [
+  { id:'p1',  title:'Morning Light',        medium:'Oil on canvas',          year:'2023', category:'painting',  themes:['color-study']              },
+  { id:'p2',  title:'Garden Study No. 3',   medium:'Acrylic on canvas',      year:'2022', category:'painting',  themes:['figurative']                },
+  { id:'p3',  title:'Untitled (Blue)',       medium:'Mixed media on panel',   year:'2023', category:'painting',  themes:['abstract']                  },
+  { id:'p4',  title:'Summer Afternoon',     medium:'Oil on canvas',          year:'2021', category:'painting',  themes:['figurative']                },
+  { id:'p5',  title:'Color Field VII',      medium:'Acrylic on canvas',      year:'2023', category:'painting',  themes:['abstract','color-study']    },
+  { id:'p6',  title:'Dusk',                 medium:'Oil on linen',           year:'2022', category:'painting',  themes:['color-study']               },
+  { id:'p7',  title:'Composition in Ochre', medium:'Oil on canvas',          year:'2023', category:'painting',  themes:['abstract']                  },
+  { id:'p8',  title:'The Garden II',        medium:'Acrylic on board',       year:'2021', category:'painting',  themes:['figurative']                },
+  { id:'s1',  title:'Form Study I',         medium:'Bronze',                 year:'2023', category:'sculpture', themes:['form','large-scale']        },
+  { id:'s2',  title:'Tension',              medium:'Welded steel',           year:'2022', category:'sculpture', themes:['form','large-scale']        },
+  { id:'s3',  title:'Small Study No. 2',    medium:'Glazed ceramic',         year:'2023', category:'sculpture', themes:['texture','small-works']     },
+  { id:'s4',  title:'Arc',                  medium:'Bronze',                 year:'2022', category:'sculpture', themes:['form']                      },
+  { id:'s5',  title:'Vessel',               medium:'Ceramic, glazed',        year:'2023', category:'sculpture', themes:['texture','color-study']     },
+  { id:'s6',  title:'Surface Study III',    medium:'Mixed media',            year:'2023', category:'sculpture', themes:['texture']                   },
+  { id:'s7',  title:'Monument',             medium:'Welded steel, patinated',year:'2020', category:'sculpture', themes:['form','large-scale']        },
+  { id:'s8',  title:'Untitled (Copper)',    medium:'Copper',                 year:'2021', category:'sculpture', themes:['texture','small-works']     },
+].map(a => ({
+  ...a,
+  src:        `https://picsum.photos/seed/${a.id}/800/800`,
+  fullSrc:    `https://picsum.photos/seed/${a.id}/1600/1200`,
+}));
+
+const TAGS = [
+  { id:'abstract',    label:'Abstract'         },
+  { id:'figurative',  label:'Figurative'       },
+  { id:'color-study', label:'Color Study'      },
+  { id:'form',        label:'Form'             },
+  { id:'texture',     label:'Surface & Texture'},
+  { id:'large-scale', label:'Large Scale'      },
+  { id:'small-works', label:'Small Works'      },
+];
+
+/* ─── Shared token shorthands ───────────────────────────────────────── */
+const T = {
+  bg:   'var(--color-bg,#0C0B09)',
+  s1:   'var(--color-surface,#161412)',
+  t1:   'var(--color-text-1,#EDE8E0)',
+  t2:   'var(--color-text-2,#8A847C)',
+  t3:   'var(--color-text-3,#5A5550)',
+  bd:   'var(--color-border,#332E2A)',
+  bds:  'var(--color-border-subtle,#181612)',
+  disp: "var(--font-display,'Cormorant',Georgia,serif)",
+  ui:   "var(--font-ui,'DM Sans',sans-serif)",
+};
+
+/* ─── Header ────────────────────────────────────────────────────────── */
+function Header({ page, onNav }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const el = document.getElementById('scroll-root');
+    if (!el) return;
+    const h = () => setScrolled(el.scrollTop > 8);
+    el.addEventListener('scroll', h, { passive: true });
+    return () => el.removeEventListener('scroll', h);
+  }, []);
+
+  const links = [['painting','Painting'],['sculpture','Sculpture'],['about','About'],['contact','Contact']];
+  return (
+    <header style={{ position:'fixed', top:0, left:0, right:0, height:64, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 clamp(16px,3vw,56px)', background: scrolled ? 'oklch(7.5% .007 60 / .93)' : T.bg, backdropFilter: scrolled ? 'blur(16px)' : 'none', borderBottom:`1px solid ${T.bds}`, zIndex:100, transition:'background 280ms ease' }}>
+      <button onClick={() => onNav('gallery')} style={{ fontFamily:T.disp, fontSize:'clamp(15px,1.5vw,21px)', fontWeight:400, letterSpacing:'0.06em', color:T.t1 }}>
+        Rosario Levine
+      </button>
+      <nav style={{ display:'flex', alignItems:'center', gap:'clamp(16px,2.5vw,38px)' }}>
+        {links.map(([id,label]) => (
+          <button key={id} onClick={() => onNav(id)} style={{ fontFamily:T.ui, fontSize:10, fontWeight:400, letterSpacing:'0.18em', textTransform:'uppercase', color: page===id ? T.t1 : T.t3, paddingBottom:2, borderBottom: page===id ? `1px solid ${T.t1}` : '1px solid transparent', transition:'color 160ms ease, border-color 160ms ease' }}>
+            {label}
+          </button>
+        ))}
+        <a href="https://www.instagram.com/rosariolevine/" target="_blank" rel="noopener noreferrer" style={{ fontFamily:T.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color:T.t3 }}>
+          IG ↗
+        </a>
+      </nav>
+    </header>
+  );
+}
+
+/* ─── Filter Bar ────────────────────────────────────────────────────── */
+function FilterBar({ primary, onPrimary, tags, onTag }) {
+  return (
+    <div style={{ position:'sticky', top:64, zIndex:50, height:48, display:'flex', alignItems:'center', padding:'0 clamp(16px,3vw,56px)', gap:24, background:T.bg, borderBottom:`1px solid ${T.bds}` }}>
+      <div style={{ display:'flex', gap:20, flexShrink:0 }}>
+        {['all','painting','sculpture'].map(id => {
+          const label = id==='all' ? 'All' : id[0].toUpperCase()+id.slice(1);
+          const active = primary===id;
+          return (
+            <button key={id} onClick={() => onPrimary(id)} style={{ fontFamily:T.ui, fontSize:10, letterSpacing:'0.16em', textTransform:'uppercase', color: active ? T.t1 : T.t3, paddingBottom:3, borderBottom: active ? `1px solid ${T.t1}` : '1px solid transparent', transition:'color 140ms ease, border-color 140ms ease' }}>
+              {label}
+            </button>
+          );
+        })}
+      </div>
+      <div style={{ width:1, height:14, background:T.bd, flexShrink:0 }} />
+      <div style={{ display:'flex', gap:7, overflowX:'auto', scrollbarWidth:'none' }}>
+        {TAGS.map(f => {
+          const active = tags.includes(f.id);
+          return (
+            <button key={f.id} onClick={() => onTag(f.id)} style={{ display:'inline-flex', alignItems:'center', padding:'3px 10px', borderRadius:999, border:`1px solid ${active ? T.t1 : T.bd}`, background: active ? T.t1 : 'transparent', color: active ? T.bg : T.t3, fontFamily:T.ui, fontSize:9, letterSpacing:'0.10em', textTransform:'uppercase', whiteSpace:'nowrap', flexShrink:0, transition:'all 140ms ease' }}>
+              {f.label}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/* ─── Lightbox ──────────────────────────────────────────────────────── */
+function Lightbox({ art, list, onClose, onPrev, onNext }) {
+  const idx = list.findIndex(a => a.id === art.id);
+  useEffect(() => {
+    const h = e => {
+      if (e.key==='Escape') onClose();
+      if (e.key==='ArrowLeft'  && idx>0)             onPrev();
+      if (e.key==='ArrowRight' && idx<list.length-1) onNext();
+    };
+    window.addEventListener('keydown', h);
+    return () => window.removeEventListener('keydown', h);
+  }, [idx, list.length]);
+
+  return (
+    <div style={{ position:'fixed', inset:0, zIndex:200, background:T.bg, display:'flex', flexDirection:'column' }}>
+      {/* Top bar */}
+      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'0 clamp(16px,3vw,56px)', height:64, borderBottom:`1px solid ${T.bds}`, flexShrink:0 }}>
+        <span style={{ fontFamily:T.disp, fontSize:20, fontStyle:'italic', fontWeight:300, color:T.t1 }}>{art.title}</span>
+        <div style={{ display:'flex', alignItems:'center', gap:24 }}>
+          <span style={{ fontFamily:T.ui, fontSize:10, color:T.t3, letterSpacing:'0.08em' }}>{idx+1} / {list.length}</span>
+          <button onClick={onClose} style={{ fontFamily:T.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color:T.t2 }}>Close</button>
+        </div>
+      </div>
+
+      {/* Image */}
+      <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center', position:'relative', padding:40, overflow:'hidden' }}>
+        {idx > 0 && (
+          <button onClick={onPrev} style={{ position:'absolute', left:'clamp(12px,3vw,40px)', top:'50%', transform:'translateY(-50%)', fontSize:22, color:T.t3, padding:12, zIndex:1 }}>←</button>
+        )}
+        <img src={art.fullSrc} alt={art.title} style={{ maxWidth:'88vw', maxHeight:'calc(100vh - 160px)', objectFit:'contain' }} />
+        {idx < list.length-1 && (
+          <button onClick={onNext} style={{ position:'absolute', right:'clamp(12px,3vw,40px)', top:'50%', transform:'translateY(-50%)', fontSize:22, color:T.t3, padding:12, zIndex:1 }}>→</button>
+        )}
+      </div>
+
+      {/* Bottom info */}
+      <div style={{ padding:'16px clamp(16px,3vw,56px)', borderTop:`1px solid ${T.bds}`, flexShrink:0 }}>
+        <p style={{ fontFamily:T.ui, fontSize:11, color:T.t2, letterSpacing:'0.06em' }}>
+          {art.medium} · {art.year} · <span style={{ textTransform:'capitalize' }}>{art.category}</span>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Gallery Page ──────────────────────────────────────────────────── */
+function GalleryPage({ initPrimary = 'all' }) {
+  const [primary, setPrimary] = useState(initPrimary);
+  const [tags, setTags]       = useState([]);
+  const [lightbox, setLightbox] = useState(null);
+
+  useEffect(() => { setPrimary(initPrimary); setTags([]); }, [initPrimary]);
+
+  const toggleTag = id => setTags(prev => prev.includes(id) ? prev.filter(t=>t!==id) : [...prev, id]);
+
+  const works = ARTWORKS.filter(a => {
+    if (primary !== 'all' && a.category !== primary) return false;
+    if (tags.length > 0 && !tags.some(t => a.themes.includes(t))) return false;
+    return true;
+  });
+
+  const lbIdx = lightbox ? works.findIndex(a => a.id===lightbox.id) : -1;
+
+  return (
+    <div className="fade-page">
+      <FilterBar primary={primary} onPrimary={id => { setPrimary(id); setTags([]); }} tags={tags} onTag={toggleTag} />
+      {works.length > 0 ? (
+        <div className="gallery-grid">
+          {works.map(art => (
+            <div key={art.id} className="artwork-card" onClick={() => setLightbox(art)}>
+              <img src={art.src} alt={art.title} loading="lazy" />
+              <div className="ov">
+                <div className="ov-info">
+                  <p style={{ fontFamily:T.disp, fontSize:17, fontStyle:'italic', fontWeight:300, color:T.t1, marginBottom:2, lineHeight:1.2 }}>{art.title}</p>
+                  <p style={{ fontFamily:T.ui, fontSize:10, letterSpacing:'0.07em', color:'rgba(237,232,224,.65)' }}>{art.medium} · {art.year}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div style={{ padding:'80px 40px', textAlign:'center', fontFamily:T.ui, fontSize:13, color:T.t3, letterSpacing:'0.06em' }}>
+          No works match the selected filters.
+        </div>
+      )}
+      {lightbox && (
+        <Lightbox
+          art={lightbox} list={works} onClose={() => setLightbox(null)}
+          onPrev={() => lbIdx > 0 && setLightbox(works[lbIdx-1])}
+          onNext={() => lbIdx < works.length-1 && setLightbox(works[lbIdx+1])}
+        />
+      )}
+    </div>
+  );
+}
+
+/* ─── About Page ────────────────────────────────────────────────────── */
+function AboutPage() {
+  return (
+    <div className="fade-page" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'calc(100vh - 64px)' }}>
+      <div style={{ overflow:'hidden', background:T.s1 }}>
+        <img src="https://picsum.photos/seed/rl-about/900/1100" alt="Rosario Levine" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+      </div>
+      <div style={{ padding:'clamp(40px,6vw,96px)', display:'flex', flexDirection:'column', justifyContent:'center', gap:24, overflowY:'auto' }}>
+        <h1 style={{ fontFamily:T.disp, fontSize:'clamp(40px,5vw,68px)', fontWeight:300, fontStyle:'italic', color:T.t1, lineHeight:1.0 }}>About</h1>
+        <div style={{ display:'flex', flexDirection:'column', gap:18, fontFamily:T.ui, fontSize:14, lineHeight:1.8, color:T.t2, maxWidth:460 }}>
+          <p>Rosario Levine is a visual artist whose practice moves between painting and sculpture. Her work is rooted in a sustained inquiry into the nature of surface — how material accumulates, how light moves across form, how a physical object can hold both weight and openness.</p>
+          <p>In painting, she builds with oil and acrylic on canvas and panel, layering mark and gesture to arrive at surfaces that feel discovered rather than designed. In sculpture, she works across scales and materials — from small glazed ceramics to large-scale bronze and steel.</p>
+          <p>Her work has been exhibited in solo and group exhibitions and is held in private and institutional collections.</p>
+        </div>
+        <a href="https://www.instagram.com/rosariolevine/" target="_blank" rel="noopener noreferrer" style={{ display:'inline-flex', alignItems:'center', gap:8, fontFamily:T.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color:T.t2, borderBottom:`1px solid ${T.bd}`, paddingBottom:3, alignSelf:'flex-start', marginTop:8 }}>
+          Instagram ↗
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Contact Page ──────────────────────────────────────────────────── */
+function ContactPage() {
+  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ name:'', email:'', message:'' });
+  const set = k => e => setForm(p => ({...p, [k]: e.target.value}));
+
+  const inputStyle = { width:'100%', background:'transparent', border:'none', borderBottom:`1px solid ${T.bd}`, padding:'10px 0', fontFamily:T.ui, fontSize:14, color:T.t1 };
+  const labelStyle = { display:'block', fontFamily:T.ui, fontSize:9, letterSpacing:'0.16em', textTransform:'uppercase', color:T.t3, marginBottom:6 };
+
+  return (
+    <div className="fade-page" style={{ minHeight:'calc(100vh - 64px)', display:'flex', alignItems:'center', justifyContent:'center', padding:'clamp(40px,6vw,80px) clamp(16px,3vw,56px)' }}>
+      <div style={{ width:'100%', maxWidth:460 }}>
+        <h1 style={{ fontFamily:T.disp, fontSize:'clamp(38px,5vw,60px)', fontWeight:300, fontStyle:'italic', color:T.t1, marginBottom:48, lineHeight:1.0 }}>Get in touch</h1>
+        {!sent ? (
+          <form onSubmit={e => { e.preventDefault(); setSent(true); }}>
+            <div style={{ display:'flex', flexDirection:'column', gap:32 }}>
+              <div><label style={labelStyle}>Name</label><input type="text" value={form.name} onChange={set('name')} required style={inputStyle} /></div>
+              <div><label style={labelStyle}>Email</label><input type="email" value={form.email} onChange={set('email')} required style={inputStyle} /></div>
+              <div><label style={labelStyle}>Message</label><textarea value={form.message} onChange={set('message')} required rows={5} style={{ ...inputStyle, resize:'none' }} /></div>
+              <button type="submit" style={{ alignSelf:'flex-start', padding:'12px 32px', fontFamily:T.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', background:T.t1, color:T.bg, border:`1px solid ${T.t1}` }}>
+                Send
+              </button>
+            </div>
+          </form>
+        ) : (
+          <p style={{ fontFamily:T.ui, fontSize:14, lineHeight:1.8, color:T.t2 }}>Thank you. Your message has been received.</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ─── App ───────────────────────────────────────────────────────────── */
+function App() {
+  const [page, setPage] = useState('gallery');
+
+  const nav = useCallback(target => {
+    const el = document.getElementById('scroll-root');
+    if (el) el.scrollTop = 0;
+    setPage(target);
+  }, []);
+
+  const renderPage = () => {
+    if (page==='about')   return <AboutPage />;
+    if (page==='contact') return <ContactPage />;
+    const init = (page==='painting'||page==='sculpture') ? page : 'all';
+    return <GalleryPage key={page} initPrimary={init} />;
+  };
+
+  return (
+    <>
+      <Header page={page} onNav={nav} />
+      <div id="scroll-root" style={{ paddingTop:64, height:'100vh', overflowY:'auto' }}>
+        {renderPage()}
+      </div>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+</script>
+</body>
+</html>

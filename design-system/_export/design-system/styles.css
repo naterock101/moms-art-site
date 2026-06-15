@@ -1,0 +1,7 @@
+/* Rosario Levine Design System — root stylesheet
+   Import-only. All rules live in token files.            */
+
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/effects.css';

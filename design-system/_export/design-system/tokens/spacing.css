@@ -1,0 +1,42 @@
+/* ── Spacing & layout tokens ──────────────────────────────────────────────────
+   8px base unit. Gallery gap is 3px. Gutters scale responsively.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Base scale */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Layout */
+  --nav-height:      64px;
+  --filter-height:   48px;
+  --chrome-height:   112px;  /* nav + filter */
+
+  --gallery-gap:     3px;
+
+  --page-gutter:     16px;   /* mobile */
+  --page-max:        1600px;
+}
+
+@media (min-width: 640px) {
+  :root { --page-gutter: 24px; }
+}
+
+@media (min-width: 1024px) {
+  :root { --page-gutter: 40px; }
+}
+
+@media (min-width: 1440px) {
+  :root { --page-gutter: 56px; }
+}

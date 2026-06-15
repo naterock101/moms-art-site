@@ -1,0 +1,39 @@
+<!-- @dsCard group="Components" name="Gallery" viewport="700x360" subtitle="ArtworkCard grid tiles with hover overlay — title, medium, year" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { ArtworkCard, GalleryGrid } = window.RosarioLevineDesignSystem_be1c33;
+
+const samples = [
+  { id:'p1', title:'Morning Light',      medium:'Oil on canvas',   year:'2023', src:'https://picsum.photos/seed/p1/400/400'  },
+  { id:'p2', title:'Garden Study No. 3', medium:'Acrylic',         year:'2022', src:'https://picsum.photos/seed/p2/400/400'  },
+  { id:'s1', title:'Form Study I',       medium:'Bronze',          year:'2023', src:'https://picsum.photos/seed/s1/400/400'  },
+  { id:'s3', title:'Small Study No. 2',  medium:'Glazed ceramic',  year:'2023', src:'https://picsum.photos/seed/s3/400/400'  },
+  { id:'p5', title:'Color Field VII',    medium:'Acrylic',         year:'2023', src:'https://picsum.photos/seed/p5/400/400'  },
+  { id:'s4', title:'Arc',                medium:'Bronze',          year:'2022', src:'https://picsum.photos/seed/s4/400/400'  },
+];
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <GalleryGrid columns={3} gap={3}>
+    {samples.map(a => (
+      <ArtworkCard key={a.id} src={a.src} title={a.title} medium={a.medium} year={a.year} />
+    ))}
+  </GalleryGrid>
+);
+</script>
+</body>
+</html>

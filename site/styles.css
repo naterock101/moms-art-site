@@ -1,0 +1,172 @@
+/* Rosario Levine — combined stylesheet (tokens + fonts via <link> in index.html) */
+
+/* ===== tokens/colors.css ===== */
+/* ── Color tokens ─────────────────────────────────────────────────────────────
+   Dark, warm gallery palette. The background retreats so artwork leads.
+   All values in oklch for perceptual uniformity.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --color-bg:              oklch(7.5% 0.007 60);   /* near-black, warm */
+  --color-surface:         oklch(11%  0.007 60);   /* image placeholder / raised */
+  --color-surface-2:       oklch(16%  0.008 60);   /* further lift */
+  --color-surface-hover:   oklch(20%  0.009 60);   /* interactive hover bg */
+
+  /* Borders */
+  --color-border:          oklch(25%  0.009 60);   /* standard divider */
+  --color-border-subtle:   oklch(15%  0.007 60);   /* hairline / nav border */
+
+  /* Text */
+  --color-text-1:          oklch(93%  0.008 70);   /* primary — warm white */
+  --color-text-2:          oklch(63%  0.007 65);   /* secondary / metadata */
+  --color-text-3:          oklch(40%  0.007 60);   /* muted / disabled */
+
+  /* Accent — warm amber, for editorial highlights only */
+  --color-accent:          oklch(71%  0.060 65);
+  --color-accent-dim:      oklch(28%  0.018 65);
+
+  /* ── Semantic aliases ──────────────────────── */
+  --bg:         var(--color-bg);
+  --fg:         var(--color-text-1);
+  --fg-muted:   var(--color-text-2);
+  --fg-faint:   var(--color-text-3);
+  --surface:    var(--color-surface);
+  --surface-2:  var(--color-surface-2);
+  --border:     var(--color-border);
+  --border-sub: var(--color-border-subtle);
+  --accent:     var(--color-accent);
+}
+
+/* ===== tokens/typography.css ===== */
+/* ── Typography tokens ────────────────────────────────────────────────────────
+   Two typefaces only:
+     Cormorant — display / artwork titles / headers  (elegant serif)
+     DM Sans   — UI / nav / metadata / body          (clean geometric sans)
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Families */
+  --font-display:  'Cormorant', Georgia, 'Times New Roman', serif;
+  --font-ui:       'DM Sans', system-ui, -apple-system, sans-serif;
+
+  /* Size scale — fluid base; use clamp() at component level for display sizes */
+  --text-2xs: 0.5625rem;  /*  9px */
+  --text-xs:  0.625rem;   /* 10px */
+  --text-sm:  0.6875rem;  /* 11px */
+  --text-base: 0.75rem;   /* 12px */
+  --text-md:  0.875rem;   /* 14px */
+  --text-lg:  1rem;       /* 16px */
+  --text-xl:  1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.75rem;    /* 44px */
+  --text-5xl: 3.5rem;     /* 56px */
+  --text-6xl: 5rem;       /* 80px */
+
+  /* Line height */
+  --leading-tight:  1.05;
+  --leading-snug:   1.2;
+  --leading-normal: 1.6;
+  --leading-loose:  1.8;
+
+  /* Letter spacing */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.10em;
+  --tracking-widest:   0.18em;
+  --tracking-ultra:    0.25em;
+
+  /* Weight */
+  --weight-light:    300;
+  --weight-normal:   400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+}
+
+/* ===== tokens/spacing.css ===== */
+/* ── Spacing & layout tokens ──────────────────────────────────────────────────
+   8px base unit. Gallery gap is 3px. Gutters scale responsively.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Base scale */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Layout */
+  --nav-height:      64px;
+  --filter-height:   48px;
+  --chrome-height:   112px;  /* nav + filter */
+
+  --gallery-gap:     3px;
+
+  --page-gutter:     16px;   /* mobile */
+  --page-max:        1600px;
+}
+
+@media (min-width: 640px) {
+  :root { --page-gutter: 24px; }
+}
+
+@media (min-width: 1024px) {
+  :root { --page-gutter: 40px; }
+}
+
+@media (min-width: 1440px) {
+  :root { --page-gutter: 56px; }
+}
+
+/* ===== tokens/effects.css ===== */
+/* ── Effects tokens ───────────────────────────────────────────────────────────
+   Transitions, easing curves, shadows.
+   Gallery favors slow, silky motion. No bounces; no heavy shadows.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Duration */
+  --dur-instant: 80ms;  /* @kind other */
+  --dur-fast:    150ms; /* @kind other */
+  --dur-base:    220ms; /* @kind other */
+  --dur-slow:    380ms; /* @kind other */
+  --dur-gallery: 600ms; /* @kind other */  /* artwork image zoom */
+
+  /* Easing */
+  --ease-linear:  linear; /* @kind other */
+  --ease-in:      cubic-bezier(0.4, 0, 1, 1);         /* @kind other */
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);          /* @kind other */
+  --ease-in-out:  cubic-bezier(0.4, 0, 0.2, 1);        /* @kind other */
+  --ease-gallery: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* @kind other */  /* image hover scale */
+
+  /* Shorthand transitions */
+  --trans-color:   color var(--dur-base) var(--ease-out),
+                   background-color var(--dur-base) var(--ease-out),
+                   border-color var(--dur-base) var(--ease-out),
+                   opacity var(--dur-base) var(--ease-out);
+
+  /* Overlays */
+  --overlay-heavy: rgba(12, 11, 9, 0.82);
+  --overlay-mid:   rgba(12, 11, 9, 0.54);
+  --overlay-light: rgba(12, 11, 9, 0.24);
+
+  /* Shadows — minimal; use the dark bg for depth */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.55);
+
+  /* Border radius — zero throughout for gallery aesthetic */
+  --radius-none: 0;
+  --radius-pill: 9999px;  /* used for filter chips only */
+}
+

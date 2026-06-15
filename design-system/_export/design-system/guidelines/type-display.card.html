@@ -1,0 +1,26 @@
+<!-- @dsCard group="Type" name="Display — Cormorant" viewport="700x220" subtitle="Serif for artist name, artwork titles, and page headers" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-bg); padding: 20px 24px; font-family: var(--font-display); }
+  .row { display: flex; flex-direction: column; gap: 6px; }
+  .meta { font-family: var(--font-ui); font-size: 9px; letter-spacing: 0.1em; color: var(--color-text-3); text-transform: uppercase; }
+  .rule { border: none; border-top: 1px solid var(--color-border-subtle); margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="meta">Artist name — 22px regular · tracking 0.06em</div>
+  <div style="font-family:var(--font-display); font-size:22px; font-weight:400; letter-spacing:0.06em; color:var(--color-text-1);">Rosario Levine</div>
+  <hr class="rule">
+  <div class="meta">Artwork title — 20px italic light</div>
+  <div style="font-family:var(--font-display); font-size:20px; font-weight:300; font-style:italic; color:var(--color-text-1);">Morning Light &nbsp;·&nbsp; Garden Study No. 3</div>
+  <hr class="rule">
+  <div class="meta">Page header — 56px light italic</div>
+  <div style="font-family:var(--font-display); font-size:52px; font-weight:300; font-style:italic; color:var(--color-text-1); line-height:1.0;">About</div>
+</div>
+</body>
+</html>

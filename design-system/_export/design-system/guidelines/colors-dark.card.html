@@ -1,0 +1,40 @@
+<!-- @dsCard group="Colors" name="Backgrounds & Surfaces" viewport="700x160" subtitle="Dark warm palette — from page bg to raised surfaces and borders" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-bg); padding: 20px; font-family: var(--font-ui); }
+  .row { display: flex; gap: 6px; }
+  .swatch {
+    flex: 1; height: 72px; display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 8px; gap: 2px;
+  }
+  .token { font-size: 9px; letter-spacing: 0.08em; color: var(--color-text-3); }
+  .label { font-size: 10px; letter-spacing: 0.04em; color: var(--color-text-2); }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="swatch" style="background:var(--color-bg); outline:1px solid var(--color-border-subtle);">
+    <span class="label">Background</span><span class="token">--color-bg</span>
+  </div>
+  <div class="swatch" style="background:var(--color-surface); outline:1px solid var(--color-border-subtle);">
+    <span class="label">Surface</span><span class="token">--color-surface</span>
+  </div>
+  <div class="swatch" style="background:var(--color-surface-2);">
+    <span class="label">Surface 2</span><span class="token">--color-surface-2</span>
+  </div>
+  <div class="swatch" style="background:var(--color-surface-hover);">
+    <span class="label">Hover</span><span class="token">--color-surface-hover</span>
+  </div>
+  <div class="swatch" style="background:var(--color-border-subtle);">
+    <span class="label">Border Subtle</span><span class="token">--color-border-subtle</span>
+  </div>
+  <div class="swatch" style="background:var(--color-border);">
+    <span class="label">Border</span><span class="token">--color-border</span>
+  </div>
+</div>
+</body>
+</html>

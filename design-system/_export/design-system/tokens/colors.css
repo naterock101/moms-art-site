@@ -1,0 +1,36 @@
+/* ── Color tokens ─────────────────────────────────────────────────────────────
+   Dark, warm gallery palette. The background retreats so artwork leads.
+   All values in oklch for perceptual uniformity.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --color-bg:              oklch(7.5% 0.007 60);   /* near-black, warm */
+  --color-surface:         oklch(11%  0.007 60);   /* image placeholder / raised */
+  --color-surface-2:       oklch(16%  0.008 60);   /* further lift */
+  --color-surface-hover:   oklch(20%  0.009 60);   /* interactive hover bg */
+
+  /* Borders */
+  --color-border:          oklch(25%  0.009 60);   /* standard divider */
+  --color-border-subtle:   oklch(15%  0.007 60);   /* hairline / nav border */
+
+  /* Text */
+  --color-text-1:          oklch(93%  0.008 70);   /* primary — warm white */
+  --color-text-2:          oklch(63%  0.007 65);   /* secondary / metadata */
+  --color-text-3:          oklch(40%  0.007 60);   /* muted / disabled */
+
+  /* Accent — warm amber, for editorial highlights only */
+  --color-accent:          oklch(71%  0.060 65);
+  --color-accent-dim:      oklch(28%  0.018 65);
+
+  /* ── Semantic aliases ──────────────────────── */
+  --bg:         var(--color-bg);
+  --fg:         var(--color-text-1);
+  --fg-muted:   var(--color-text-2);
+  --fg-faint:   var(--color-text-3);
+  --surface:    var(--color-surface);
+  --surface-2:  var(--color-surface-2);
+  --border:     var(--color-border);
+  --border-sub: var(--color-border-subtle);
+  --accent:     var(--color-accent);
+}

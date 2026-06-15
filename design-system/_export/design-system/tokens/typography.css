@@ -1,0 +1,47 @@
+/* ── Typography tokens ────────────────────────────────────────────────────────
+   Two typefaces only:
+     Cormorant — display / artwork titles / headers  (elegant serif)
+     DM Sans   — UI / nav / metadata / body          (clean geometric sans)
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+:root {
+  /* Families */
+  --font-display:  'Cormorant', Georgia, 'Times New Roman', serif;
+  --font-ui:       'DM Sans', system-ui, -apple-system, sans-serif;
+
+  /* Size scale — fluid base; use clamp() at component level for display sizes */
+  --text-2xs: 0.5625rem;  /*  9px */
+  --text-xs:  0.625rem;   /* 10px */
+  --text-sm:  0.6875rem;  /* 11px */
+  --text-base: 0.75rem;   /* 12px */
+  --text-md:  0.875rem;   /* 14px */
+  --text-lg:  1rem;       /* 16px */
+  --text-xl:  1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.75rem;    /* 44px */
+  --text-5xl: 3.5rem;     /* 56px */
+  --text-6xl: 5rem;       /* 80px */
+
+  /* Line height */
+  --leading-tight:  1.05;
+  --leading-snug:   1.2;
+  --leading-normal: 1.6;
+  --leading-loose:  1.8;
+
+  /* Letter spacing */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.10em;
+  --tracking-widest:   0.18em;
+  --tracking-ultra:    0.25em;
+
+  /* Weight */
+  --weight-light:    300;
+  --weight-normal:   400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+}

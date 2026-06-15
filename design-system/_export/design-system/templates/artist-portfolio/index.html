@@ -1,0 +1,289 @@
+<!-- @template name="Artist Portfolio" description="Full gallery website for visual artists — painting/sculpture filters, lightbox, about and contact pages" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artist Name</title><!-- ← update -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- React must be in scope before ds-base loads the bundle -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="./ds-base.js"></script><!-- loads styles.css + _ds_bundle.js async -->
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--color-bg, #0C0B09);
+  color: var(--color-text-1, #EDE8E0);
+  font-family: var(--font-ui, 'DM Sans', sans-serif);
+  overflow: hidden;
+}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; background: none; border: none; padding: 0; font: inherit; color: inherit; }
+img { display: block; }
+input, textarea { font: inherit; outline: none; }
+
+.gallery-grid {
+  display: grid; gap: 3px; padding: 3px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 640px)  { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.artwork-card { position: relative; aspect-ratio: 1/1; overflow: hidden; cursor: pointer; background: var(--color-surface, #161412); }
+.artwork-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(.25,.46,.45,.94); }
+.artwork-card:hover img { transform: scale(1.04); }
+.artwork-card .ov { position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,11,9,.80) 0%, transparent 55%); opacity: 0; transition: opacity 300ms ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; }
+.artwork-card:hover .ov { opacity: 1; }
+.artwork-card .ov-info { transform: translateY(7px); transition: transform 300ms ease; }
+.artwork-card:hover .ov-info { transform: translateY(0); }
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+.fade-in { animation: fi 300ms ease both; }
+@keyframes fi { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+const { useState, useEffect, useCallback } = React;
+
+/* ─────────────────────────────────────────────────────────────
+   CUSTOMIZE: Replace with your artwork data.
+   Each artwork needs: id, title, medium, year, category
+   ('painting' | 'sculpture'), themes (array of tag ids),
+   src (thumbnail URL), fullSrc (lightbox URL).
+───────────────────────────────────────────────────────────── */
+const ARTIST_NAME = 'Artist Name';
+
+const ARTWORKS = [
+  { id:'p1', title:'Work Title One',   medium:'Oil on canvas',   year:'2024', category:'painting',  themes:['abstract'],              src:'https://picsum.photos/seed/p1/800/800',  fullSrc:'https://picsum.photos/seed/p1/1600/1200' },
+  { id:'p2', title:'Work Title Two',   medium:'Acrylic',         year:'2023', category:'painting',  themes:['figurative'],            src:'https://picsum.photos/seed/p2/800/800',  fullSrc:'https://picsum.photos/seed/p2/1600/1200' },
+  { id:'p3', title:'Work Title Three', medium:'Mixed media',     year:'2024', category:'painting',  themes:['abstract','color-study'],src:'https://picsum.photos/seed/p3/800/800',  fullSrc:'https://picsum.photos/seed/p3/1600/1200' },
+  { id:'p4', title:'Work Title Four',  medium:'Oil on linen',    year:'2023', category:'painting',  themes:['color-study'],           src:'https://picsum.photos/seed/p4/800/800',  fullSrc:'https://picsum.photos/seed/p4/1600/1200' },
+  { id:'s1', title:'Form Study I',     medium:'Bronze',          year:'2024', category:'sculpture', themes:['form','large-scale'],    src:'https://picsum.photos/seed/s1/800/800',  fullSrc:'https://picsum.photos/seed/s1/1600/1200' },
+  { id:'s2', title:'Small Study',      medium:'Glazed ceramic',  year:'2023', category:'sculpture', themes:['texture','small-works'], src:'https://picsum.photos/seed/s3/800/800',  fullSrc:'https://picsum.photos/seed/s3/1600/1200' },
+  { id:'s3', title:'Arc',              medium:'Welded steel',    year:'2022', category:'sculpture', themes:['form'],                  src:'https://picsum.photos/seed/s4/800/800',  fullSrc:'https://picsum.photos/seed/s4/1600/1200' },
+  { id:'s4', title:'Vessel',           medium:'Ceramic, glazed', year:'2024', category:'sculpture', themes:['texture','color-study'], src:'https://picsum.photos/seed/s5/800/800',  fullSrc:'https://picsum.photos/seed/s5/1600/1200' },
+];
+
+const TAGS = [
+  { id:'abstract',    label:'Abstract'          },
+  { id:'figurative',  label:'Figurative'        },
+  { id:'color-study', label:'Color Study'       },
+  { id:'form',        label:'Form'              },
+  { id:'texture',     label:'Surface & Texture' },
+  { id:'large-scale', label:'Large Scale'       },
+  { id:'small-works', label:'Small Works'       },
+];
+
+/* ─── Token shorthands ──────────────────────────────────────── */
+const T = {
+  bg:T1.bg   = 'var(--color-bg,#0C0B09)',
+  s1:         'var(--color-surface,#161412)',
+  t1:         'var(--color-text-1,#EDE8E0)',
+  t2:         'var(--color-text-2,#8A847C)',
+  t3:         'var(--color-text-3,#5A5550)',
+  bd:         'var(--color-border,#332E2A)',
+  bds:        'var(--color-border-subtle,#181612)',
+  disp:       "var(--font-display,'Cormorant',Georgia,serif)",
+  ui:         "var(--font-ui,'DM Sans',sans-serif)",
+};
+// Clean up the forward reference above:
+const Tc = {
+  bg:'var(--color-bg,#0C0B09)', s1:'var(--color-surface,#161412)',
+  t1:'var(--color-text-1,#EDE8E0)', t2:'var(--color-text-2,#8A847C)', t3:'var(--color-text-3,#5A5550)',
+  bd:'var(--color-border,#332E2A)', bds:'var(--color-border-subtle,#181612)',
+  disp:"var(--font-display,'Cormorant',Georgia,serif)", ui:"var(--font-ui,'DM Sans',sans-serif)",
+};
+
+/* ─── Header ────────────────────────────────────────────────── */
+function Header({ page, onNav }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const el = document.getElementById('scroll-root');
+    if (!el) return;
+    const h = () => setScrolled(el.scrollTop > 8);
+    el.addEventListener('scroll', h, { passive: true });
+    return () => el.removeEventListener('scroll', h);
+  }, []);
+
+  const links = [['painting','Painting'],['sculpture','Sculpture'],['about','About'],['contact','Contact']];
+  return (
+    <header style={{ position:'fixed', top:0, left:0, right:0, height:64, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 clamp(16px,3vw,56px)', background: scrolled ? 'oklch(7.5% .007 60 / .93)' : Tc.bg, backdropFilter: scrolled ? 'blur(16px)' : 'none', borderBottom:`1px solid ${Tc.bds}`, zIndex:100, transition:'background 280ms ease' }}>
+      <button onClick={() => onNav('gallery')} style={{ fontFamily:Tc.disp, fontSize:'clamp(15px,1.5vw,21px)', fontWeight:400, letterSpacing:'0.06em', color:Tc.t1 }}>
+        {ARTIST_NAME}
+      </button>
+      <nav style={{ display:'flex', alignItems:'center', gap:'clamp(16px,2.5vw,38px)' }}>
+        {links.map(([id,label]) => (
+          <button key={id} onClick={() => onNav(id)} style={{ fontFamily:Tc.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color: page===id ? Tc.t1 : Tc.t3, paddingBottom:2, borderBottom: page===id ? `1px solid ${Tc.t1}` : '1px solid transparent', transition:'color 160ms ease, border-color 160ms ease' }}>
+            {label}
+          </button>
+        ))}
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" style={{ fontFamily:Tc.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color:Tc.t3 }}>IG ↗</a>
+      </nav>
+    </header>
+  );
+}
+
+/* ─── Filter Bar ────────────────────────────────────────────── */
+function FilterBar({ primary, onPrimary, tags, onTag }) {
+  return (
+    <div style={{ position:'sticky', top:64, zIndex:50, height:48, display:'flex', alignItems:'center', padding:'0 clamp(16px,3vw,56px)', gap:24, background:Tc.bg, borderBottom:`1px solid ${Tc.bds}` }}>
+      <div style={{ display:'flex', gap:20, flexShrink:0 }}>
+        {['all','painting','sculpture'].map(id => {
+          const active = primary===id;
+          return (
+            <button key={id} onClick={() => onPrimary(id)} style={{ fontFamily:Tc.ui, fontSize:10, letterSpacing:'0.16em', textTransform:'uppercase', color: active ? Tc.t1 : Tc.t3, paddingBottom:3, borderBottom: active ? `1px solid ${Tc.t1}` : '1px solid transparent', transition:'color 140ms ease, border-color 140ms ease' }}>
+              {id==='all'?'All':id[0].toUpperCase()+id.slice(1)}
+            </button>
+          );
+        })}
+      </div>
+      <div style={{ width:1, height:14, background:Tc.bd, flexShrink:0 }} />
+      <div style={{ display:'flex', gap:7, overflowX:'auto' }}>
+        {TAGS.map(f => {
+          const active = tags.includes(f.id);
+          return (
+            <button key={f.id} onClick={() => onTag(f.id)} style={{ display:'inline-flex', alignItems:'center', padding:'3px 10px', borderRadius:999, border:`1px solid ${active ? Tc.t1 : Tc.bd}`, background: active ? Tc.t1 : 'transparent', color: active ? Tc.bg : Tc.t3, fontFamily:Tc.ui, fontSize:9, letterSpacing:'0.10em', textTransform:'uppercase', whiteSpace:'nowrap', flexShrink:0, transition:'all 140ms ease' }}>
+              {f.label}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/* ─── Lightbox ──────────────────────────────────────────────── */
+function Lightbox({ art, list, onClose, onPrev, onNext }) {
+  const idx = list.findIndex(a => a.id===art.id);
+  useEffect(() => {
+    const h = e => { if(e.key==='Escape') onClose(); if(e.key==='ArrowLeft'&&idx>0) onPrev(); if(e.key==='ArrowRight'&&idx<list.length-1) onNext(); };
+    window.addEventListener('keydown', h);
+    return () => window.removeEventListener('keydown', h);
+  }, [idx, list.length]);
+  return (
+    <div style={{ position:'fixed', inset:0, zIndex:200, background:Tc.bg, display:'flex', flexDirection:'column' }}>
+      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'0 clamp(16px,3vw,56px)', height:64, borderBottom:`1px solid ${Tc.bds}`, flexShrink:0 }}>
+        <span style={{ fontFamily:Tc.disp, fontSize:20, fontStyle:'italic', fontWeight:300, color:Tc.t1 }}>{art.title}</span>
+        <div style={{ display:'flex', alignItems:'center', gap:24 }}>
+          <span style={{ fontFamily:Tc.ui, fontSize:10, color:Tc.t3, letterSpacing:'0.08em' }}>{idx+1} / {list.length}</span>
+          <button onClick={onClose} style={{ fontFamily:Tc.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color:Tc.t2 }}>Close</button>
+        </div>
+      </div>
+      <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center', position:'relative', padding:40, overflow:'hidden' }}>
+        {idx > 0 && <button onClick={onPrev} style={{ position:'absolute', left:'clamp(12px,3vw,40px)', top:'50%', transform:'translateY(-50%)', fontSize:22, color:Tc.t3, padding:12, zIndex:1 }}>←</button>}
+        <img src={art.fullSrc} alt={art.title} style={{ maxWidth:'88vw', maxHeight:'calc(100vh - 160px)', objectFit:'contain' }} />
+        {idx < list.length-1 && <button onClick={onNext} style={{ position:'absolute', right:'clamp(12px,3vw,40px)', top:'50%', transform:'translateY(-50%)', fontSize:22, color:Tc.t3, padding:12, zIndex:1 }}>→</button>}
+      </div>
+      <div style={{ padding:'16px clamp(16px,3vw,56px)', borderTop:`1px solid ${Tc.bds}`, flexShrink:0 }}>
+        <p style={{ fontFamily:Tc.ui, fontSize:11, color:Tc.t2, letterSpacing:'0.06em' }}>{art.medium} · {art.year} · <span style={{ textTransform:'capitalize' }}>{art.category}</span></p>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Gallery Page ──────────────────────────────────────────── */
+function GalleryPage({ initPrimary = 'all' }) {
+  const [primary, setPrimary] = useState(initPrimary);
+  const [tags, setTags] = useState([]);
+  const [lightbox, setLightbox] = useState(null);
+  useEffect(() => { setPrimary(initPrimary); setTags([]); }, [initPrimary]);
+  const toggleTag = id => setTags(p => p.includes(id) ? p.filter(t=>t!==id) : [...p, id]);
+  const works = ARTWORKS.filter(a => (primary==='all'||a.category===primary) && (tags.length===0||tags.some(t=>a.themes.includes(t))));
+  const lbIdx = lightbox ? works.findIndex(a => a.id===lightbox.id) : -1;
+  return (
+    <div className="fade-in">
+      <FilterBar primary={primary} onPrimary={id=>{setPrimary(id);setTags([]);}} tags={tags} onTag={toggleTag} />
+      <div className="gallery-grid">
+        {works.map(art => (
+          <div key={art.id} className="artwork-card" onClick={() => setLightbox(art)}>
+            <img src={art.src} alt={art.title} loading="lazy" />
+            <div className="ov"><div className="ov-info">
+              <p style={{ fontFamily:Tc.disp, fontSize:17, fontStyle:'italic', fontWeight:300, color:Tc.t1, marginBottom:2, lineHeight:1.2 }}>{art.title}</p>
+              <p style={{ fontFamily:Tc.ui, fontSize:10, letterSpacing:'0.07em', color:'rgba(237,232,224,.65)' }}>{art.medium} · {art.year}</p>
+            </div></div>
+          </div>
+        ))}
+      </div>
+      {lightbox && <Lightbox art={lightbox} list={works} onClose={()=>setLightbox(null)} onPrev={()=>lbIdx>0&&setLightbox(works[lbIdx-1])} onNext={()=>lbIdx<works.length-1&&setLightbox(works[lbIdx+1])} />}
+    </div>
+  );
+}
+
+/* ─── About Page ────────────────────────────────────────────── */
+function AboutPage() {
+  return (
+    <div className="fade-in" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'calc(100vh - 64px)' }}>
+      <div style={{ overflow:'hidden', background:Tc.s1 }}>
+        <img src="https://picsum.photos/seed/rl-about/900/1100" alt={ARTIST_NAME} style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+      </div>
+      <div style={{ padding:'clamp(40px,6vw,96px)', display:'flex', flexDirection:'column', justifyContent:'center', gap:24, overflowY:'auto' }}>
+        <h1 style={{ fontFamily:Tc.disp, fontSize:'clamp(40px,5vw,68px)', fontWeight:300, fontStyle:'italic', color:Tc.t1, lineHeight:1.0 }}>About</h1>
+        {/* ← Replace with artist bio */}
+        <div style={{ display:'flex', flexDirection:'column', gap:18, fontFamily:Tc.ui, fontSize:14, lineHeight:1.8, color:Tc.t2, maxWidth:460 }}>
+          <p>Artist bio paragraph one. Describe the artist's practice, materials, and central concerns.</p>
+          <p>Artist bio paragraph two. Background, training, influences, or approach.</p>
+          <p>Exhibition history, collections, or other relevant context.</p>
+        </div>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" style={{ display:'inline-flex', alignItems:'center', gap:8, fontFamily:Tc.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', color:Tc.t2, borderBottom:`1px solid ${Tc.bd}`, paddingBottom:3, alignSelf:'flex-start', marginTop:8 }}>
+          Instagram ↗
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Contact Page ──────────────────────────────────────────── */
+function ContactPage() {
+  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ name:'', email:'', message:'' });
+  const set = k => e => setForm(p => ({...p, [k]: e.target.value}));
+  const iStyle = { width:'100%', background:'transparent', border:'none', borderBottom:`1px solid ${Tc.bd}`, padding:'10px 0', fontFamily:Tc.ui, fontSize:14, color:Tc.t1 };
+  const lStyle = { display:'block', fontFamily:Tc.ui, fontSize:9, letterSpacing:'0.16em', textTransform:'uppercase', color:Tc.t3, marginBottom:6 };
+  return (
+    <div className="fade-in" style={{ minHeight:'calc(100vh - 64px)', display:'flex', alignItems:'center', justifyContent:'center', padding:'clamp(40px,6vw,80px) clamp(16px,3vw,56px)' }}>
+      <div style={{ width:'100%', maxWidth:460 }}>
+        <h1 style={{ fontFamily:Tc.disp, fontSize:'clamp(38px,5vw,60px)', fontWeight:300, fontStyle:'italic', color:Tc.t1, marginBottom:48, lineHeight:1.0 }}>Get in touch</h1>
+        {!sent ? (
+          <form onSubmit={e=>{e.preventDefault();setSent(true);}}>
+            <div style={{ display:'flex', flexDirection:'column', gap:32 }}>
+              <div><label style={lStyle}>Name</label><input type="text" value={form.name} onChange={set('name')} required style={iStyle}/></div>
+              <div><label style={lStyle}>Email</label><input type="email" value={form.email} onChange={set('email')} required style={iStyle}/></div>
+              <div><label style={lStyle}>Message</label><textarea value={form.message} onChange={set('message')} required rows={5} style={{...iStyle,resize:'none'}}/></div>
+              <button type="submit" style={{ alignSelf:'flex-start', padding:'12px 32px', fontFamily:Tc.ui, fontSize:10, letterSpacing:'0.18em', textTransform:'uppercase', background:Tc.t1, color:Tc.bg, border:`1px solid ${Tc.t1}` }}>Send</button>
+            </div>
+          </form>
+        ) : (
+          <p style={{ fontFamily:Tc.ui, fontSize:14, lineHeight:1.8, color:Tc.t2 }}>Thank you. Your message has been received.</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ─── App ───────────────────────────────────────────────────── */
+function App() {
+  const [page, setPage] = useState('gallery');
+  const nav = useCallback(t => { const el=document.getElementById('scroll-root'); if(el) el.scrollTop=0; setPage(t); }, []);
+  const init = (page==='painting'||page==='sculpture') ? page : 'all';
+  return (
+    <>
+      <Header page={page} onNav={nav} />
+      <div id="scroll-root" style={{ paddingTop:64, height:'100vh', overflowY:'auto' }}>
+        {page==='about'   ? <AboutPage /> :
+         page==='contact' ? <ContactPage /> :
+         <GalleryPage key={page} initPrimary={init} />}
+      </div>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+</script>
+</body>
+</html>

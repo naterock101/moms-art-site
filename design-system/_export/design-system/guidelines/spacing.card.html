@@ -1,0 +1,32 @@
+<!-- @dsCard group="Spacing" name="Spacing Scale" viewport="700x170" subtitle="8px base unit — from 4px micro to 96px macro" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-bg); padding: 20px 24px; font-family: var(--font-ui); }
+  .row { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .bar { background: var(--color-text-3); width: 100%; border-radius: 1px; }
+  .label { font-size: 9px; letter-spacing: 0.06em; color: var(--color-text-3); }
+  .value { font-size: 8px; color: var(--color-border); }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="item"><div class="bar" style="height:4px; width:32px;"></div><span class="label">1</span><span class="value">4px</span></div>
+  <div class="item"><div class="bar" style="height:8px; width:32px;"></div><span class="label">2</span><span class="value">8px</span></div>
+  <div class="item"><div class="bar" style="height:12px; width:32px;"></div><span class="label">3</span><span class="value">12px</span></div>
+  <div class="item"><div class="bar" style="height:16px; width:32px;"></div><span class="label">4</span><span class="value">16px</span></div>
+  <div class="item"><div class="bar" style="height:20px; width:32px;"></div><span class="label">5</span><span class="value">20px</span></div>
+  <div class="item"><div class="bar" style="height:24px; width:32px;"></div><span class="label">6</span><span class="value">24px</span></div>
+  <div class="item"><div class="bar" style="height:32px; width:32px;"></div><span class="label">8</span><span class="value">32px</span></div>
+  <div class="item"><div class="bar" style="height:40px; width:32px;"></div><span class="label">10</span><span class="value">40px</span></div>
+  <div class="item"><div class="bar" style="height:48px; width:32px;"></div><span class="label">12</span><span class="value">48px</span></div>
+  <div class="item"><div class="bar" style="height:64px; width:32px;"></div><span class="label">16</span><span class="value">64px</span></div>
+  <div class="item"><div class="bar" style="height:80px; width:32px;"></div><span class="label">20</span><span class="value">80px</span></div>
+  <div class="item"><div class="bar" style="height:96px; width:32px;"></div><span class="label">24</span><span class="value">96px</span></div>
+</div>
+</body>
+</html>

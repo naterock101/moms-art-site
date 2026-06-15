@@ -1,0 +1,34 @@
+<!-- @dsCard group="Spacing" name="Motion & Timing" viewport="700x160" subtitle="Duration scale and easing curves — slow and silky for gallery feel" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-bg); padding: 20px 24px; font-family: var(--font-ui); }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .cell { background: var(--color-surface); padding: 10px 10px 8px; display: flex; flex-direction: column; gap: 4px; }
+  .bar-wrap { height: 3px; background: var(--color-border); border-radius: 2px; overflow: hidden; }
+  .bar { height: 100%; background: var(--color-text-2); border-radius: 2px; }
+  .name { font-size: 9px; letter-spacing: 0.08em; color: var(--color-text-1); text-transform: uppercase; }
+  .val  { font-size: 9px; color: var(--color-text-3); }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="cell"><div class="bar-wrap"><div class="bar" style="width:7%"></div></div><span class="name">Instant</span><span class="val">80ms</span></div>
+  <div class="cell"><div class="bar-wrap"><div class="bar" style="width:18%"></div></div><span class="name">Fast</span><span class="val">150ms</span></div>
+  <div class="cell"><div class="bar-wrap"><div class="bar" style="width:28%"></div></div><span class="name">Base</span><span class="val">220ms</span></div>
+  <div class="cell"><div class="bar-wrap"><div class="bar" style="width:46%"></div></div><span class="name">Slow</span><span class="val">380ms</span></div>
+  <div class="cell"><div class="bar-wrap"><div class="bar" style="width:72%"></div></div><span class="name">Gallery</span><span class="val">600ms</span></div>
+</div>
+<div style="margin-top:10px; display:flex; gap:6px;">
+  <div style="background:var(--color-surface); padding:8px 12px; font-size:9px; color:var(--color-text-3); letter-spacing:0.08em;">
+    ease-out · cubic-bezier(0, 0, 0.2, 1) — nav, overlays
+  </div>
+  <div style="background:var(--color-surface); padding:8px 12px; font-size:9px; color:var(--color-text-3); letter-spacing:0.08em;">
+    ease-gallery · cubic-bezier(0.25, 0.46, 0.45, 0.94) — image scale
+  </div>
+</div>
+</body>
+</html>

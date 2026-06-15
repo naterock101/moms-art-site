@@ -1,0 +1,46 @@
+<!-- @dsCard group="Colors" name="Text & Accent" viewport="700x160" subtitle="Three text levels and a warm amber accent" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--color-bg); padding: 20px; font-family: var(--font-ui); }
+  .row { display: flex; gap: 6px; }
+  .swatch {
+    flex: 1; height: 72px; display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 8px; gap: 2px;
+  }
+  .token { font-size: 9px; letter-spacing: 0.08em; color: var(--color-text-3); }
+  .label { font-size: 10px; letter-spacing: 0.04em; color: var(--color-text-2); }
+  .preview {
+    font-family: var(--font-ui); font-size: 18px; font-weight: 400;
+    padding: 10px 8px 4px;
+  }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="swatch" style="background:var(--color-bg); outline:1px solid var(--color-border-subtle); flex:1.5;">
+    <span class="preview" style="color:var(--color-text-1);">Aa</span>
+    <span class="label">Text 1</span><span class="token">--color-text-1</span>
+  </div>
+  <div class="swatch" style="background:var(--color-bg); outline:1px solid var(--color-border-subtle); flex:1.5;">
+    <span class="preview" style="color:var(--color-text-2);">Aa</span>
+    <span class="label">Text 2</span><span class="token">--color-text-2</span>
+  </div>
+  <div class="swatch" style="background:var(--color-bg); outline:1px solid var(--color-border-subtle); flex:1.5;">
+    <span class="preview" style="color:var(--color-text-3);">Aa</span>
+    <span class="label">Text 3 / Muted</span><span class="token">--color-text-3</span>
+  </div>
+  <div class="swatch" style="background:var(--color-accent-dim);">
+    <span class="preview" style="color:var(--color-accent);">Aa</span>
+    <span class="label">Accent</span><span class="token">--color-accent</span>
+  </div>
+  <div class="swatch" style="background:var(--color-text-1);">
+    <span class="label" style="color:var(--color-bg);">Inverted</span>
+    <span class="token" style="color: oklch(30% 0.007 60);">--color-text-1 bg</span>
+  </div>
+</div>
+</body>
+</html>

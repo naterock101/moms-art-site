@@ -1,0 +1,306 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/filters/**",
+              "components/gallery/**",
+              "components/navigation/**",
+              "components/ui/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Cormorant|DM Sans))/i]",
+        "message": "Font not provided by the design system. Available: Cormorant, DM Sans."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArtworkCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|title|medium|year|aspectRatio|onClick|key|ref|className|style|children)$/]",
+        "message": "<ArtworkCard> doesn't accept that prop. Declared props: src, alt, title, medium, year, aspectRatio, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|size|onClick|href|disabled|type|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, size, onClick, href, disabled, type."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|ghost)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit|reset)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit' | 'reset'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FilterBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:primaryFilter|onPrimaryChange|secondaryFilters|activeTags|onTagToggle|key|ref|className|style|children)$/]",
+        "message": "<FilterBar> doesn't accept that prop. Declared props: primaryFilter, onPrimaryChange, secondaryFilters, activeTags, onTagToggle."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FilterBar'] > JSXAttribute[name.name='primaryFilter'] > Literal[value!=/^(?:all|painting|sculpture)$/]",
+        "message": "<FilterBar> primaryFilter must be one of 'all' | 'painting' | 'sculpture'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FilterChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|active|onClick|key|ref|className|style|children)$/]",
+        "message": "<FilterChip> doesn't accept that prop. Declared props: label, active, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='GalleryGrid'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|columns|gap|key|ref|className|style|children)$/]",
+        "message": "<GalleryGrid> doesn't accept that prop. Declared props: children, columns, gap."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Header'] > JSXAttribute > JSXIdentifier[name!=/^(?:activePage|onNavigate|key|ref|className|style|children)$/]",
+        "message": "<Header> doesn't accept that prop. Declared props: activePage, onNavigate."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Header'] > JSXAttribute[name.name='activePage'] > Literal[value!=/^(?:gallery|painting|sculpture|about|contact)$/]",
+        "message": "<Header> activePage must be one of 'gallery' | 'painting' | 'sculpture' | 'about' | 'contact'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|category|key|ref|className|style|children)$/]",
+        "message": "<Tag> doesn't accept that prop. Declared props: label, category."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "ArtworkCard": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "FilterBar": {
+        "replaces": []
+      },
+      "FilterChip": {
+        "replaces": []
+      },
+      "GalleryGrid": {
+        "replaces": []
+      },
+      "Header": {
+        "replaces": []
+      },
+      "Tag": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--bg",
+      "--border",
+      "--border-sub",
+      "--chrome-height",
+      "--color-accent",
+      "--color-accent-dim",
+      "--color-bg",
+      "--color-border",
+      "--color-border-subtle",
+      "--color-surface",
+      "--color-surface-2",
+      "--color-surface-hover",
+      "--color-text-1",
+      "--color-text-2",
+      "--color-text-3",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-gallery",
+      "--dur-instant",
+      "--dur-slow",
+      "--ease-gallery",
+      "--ease-in",
+      "--ease-in-out",
+      "--ease-linear",
+      "--ease-out",
+      "--fg",
+      "--fg-faint",
+      "--fg-muted",
+      "--filter-height",
+      "--font-display",
+      "--font-ui",
+      "--gallery-gap",
+      "--leading-loose",
+      "--leading-normal",
+      "--leading-snug",
+      "--leading-tight",
+      "--nav-height",
+      "--overlay-heavy",
+      "--overlay-light",
+      "--overlay-mid",
+      "--page-gutter",
+      "--page-max",
+      "--radius-none",
+      "--radius-pill",
+      "--shadow-md",
+      "--shadow-sm",
+      "--space-1",
+      "--space-10",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-20",
+      "--space-24",
+      "--space-3",
+      "--space-32",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8",
+      "--surface",
+      "--surface-2",
+      "--text-2xl",
+      "--text-2xs",
+      "--text-3xl",
+      "--text-4xl",
+      "--text-5xl",
+      "--text-6xl",
+      "--text-base",
+      "--text-lg",
+      "--text-md",
+      "--text-sm",
+      "--text-xl",
+      "--text-xs",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--tracking-ultra",
+      "--tracking-wide",
+      "--tracking-wider",
+      "--tracking-widest",
+      "--trans-color",
+      "--weight-light",
+      "--weight-medium",
+      "--weight-normal",
+      "--weight-semibold"
+    ],
+    "tokenKinds": {
+      "--color-bg": "color",
+      "--color-surface": "color",
+      "--color-surface-2": "color",
+      "--color-surface-hover": "color",
+      "--color-border": "color",
+      "--color-border-subtle": "color",
+      "--color-text-1": "font",
+      "--color-text-2": "font",
+      "--color-text-3": "font",
+      "--color-accent": "color",
+      "--color-accent-dim": "color",
+      "--bg": "color",
+      "--fg": "color",
+      "--fg-muted": "color",
+      "--fg-faint": "color",
+      "--surface": "color",
+      "--surface-2": "color",
+      "--border": "color",
+      "--border-sub": "color",
+      "--accent": "color",
+      "--font-display": "font",
+      "--font-ui": "font",
+      "--text-2xs": "font",
+      "--text-xs": "font",
+      "--text-sm": "font",
+      "--text-base": "font",
+      "--text-md": "font",
+      "--text-lg": "font",
+      "--text-xl": "font",
+      "--text-2xl": "font",
+      "--text-3xl": "font",
+      "--text-4xl": "font",
+      "--text-5xl": "font",
+      "--text-6xl": "font",
+      "--leading-tight": "font",
+      "--leading-snug": "font",
+      "--leading-normal": "font",
+      "--leading-loose": "font",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--tracking-wide": "font",
+      "--tracking-wider": "font",
+      "--tracking-widest": "font",
+      "--tracking-ultra": "font",
+      "--weight-light": "font",
+      "--weight-normal": "font",
+      "--weight-medium": "font",
+      "--weight-semibold": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-10": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--space-20": "spacing",
+      "--space-24": "spacing",
+      "--space-32": "spacing",
+      "--nav-height": "spacing",
+      "--filter-height": "spacing",
+      "--chrome-height": "spacing",
+      "--gallery-gap": "spacing",
+      "--page-gutter": "spacing",
+      "--page-max": "spacing",
+      "--dur-instant": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other",
+      "--dur-gallery": "other",
+      "--ease-linear": "other",
+      "--ease-in": "other",
+      "--ease-out": "other",
+      "--ease-in-out": "other",
+      "--ease-gallery": "other",
+      "--trans-color": "color",
+      "--overlay-heavy": "color",
+      "--overlay-mid": "color",
+      "--overlay-light": "color",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--radius-none": "radius",
+      "--radius-pill": "radius"
+    },
+    "fontFamilies": [
+      "Cormorant",
+      "DM Sans"
+    ]
+  }
+}
