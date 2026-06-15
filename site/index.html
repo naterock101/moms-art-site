@@ -1598,12 +1598,12 @@ function figureHTML(w, styleAttr){
 
 function renderHome(){
   const ordered = shuffle(WORKS);
-  let idx = 0, html = '';
-  for (const tpl of TEMPLATES){
-    const k = tpl.length;
-    const works = ordered.slice(idx, idx + k); idx += k;
-    if (works.length === 0) break;
-    // Pair lower-res works to smaller cells so nothing is blown up too large.
+  let idx = 0, html = '', tplIdx = 0;
+  while (idx < ordered.length){
+    const tpl = TEMPLATES[tplIdx % TEMPLATES.length];
+    tplIdx++;
+    const works = ordered.slice(idx, idx + tpl.length);
+    idx += works.length;
     const cells = tpl.slice(0, works.length).map((c,i)=>({ ...c, i, area:(c.ce-c.cs)*(c.re-c.rs) }));
     const cellsByArea = [...cells].sort((a,b)=> a.area-b.area);
     const worksByRes  = [...works].sort((a,b)=> a.px-b.px);
@@ -1615,7 +1615,7 @@ function renderHome(){
   document.body.dataset.view = 'home';
   app.className = 'view-home';
   app.innerHTML = html;
-  currentList = ordered.slice(0, idx);
+  currentList = ordered;
   setActiveNav('home');
   bindTiles();
   window.scrollTo(0, 0);
