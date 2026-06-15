@@ -1,0 +1,704 @@
+[
+  {
+    "id": "p-ambrosial-oil-on-canvas-68-x-49-01",
+    "title": "Ambrosial",
+    "medium": "oil on canvas",
+    "size": "68\" x 49\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-ambrosial-oil-on-canvas-68-x-49-01.jpg"
+  },
+  {
+    "id": "p-balancing-act-oil-on-canvas-49-x-47-01",
+    "title": "Balancing Act",
+    "medium": "oil on canvas",
+    "size": "49\" x 47\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-balancing-act-oil-on-canvas-49-x-47-01.jpg"
+  },
+  {
+    "id": "p-connecting-oil-on-canvas-42-x-48-01",
+    "title": "Connecting",
+    "medium": "oil on canvas",
+    "size": "42\" x 48\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-connecting-oil-on-canvas-42-x-48-01.jpg"
+  },
+  {
+    "id": "p-gathering-oil-on-canvas-44-x-34-01",
+    "title": "Gathering",
+    "medium": "oil on canvas",
+    "size": "44\" x 34\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-gathering-oil-on-canvas-44-x-34-01.jpg"
+  },
+  {
+    "id": "p-going-with-the-flow-4-panels-oil-on-canvas-49-x-36-5-01",
+    "title": "Going with the Flow · 4 Panels",
+    "medium": "oil on canvas",
+    "size": "49\" x 36.5\"",
+    "category": "painting",
+    "px": 3264,
+    "file": "p-going-with-the-flow-4-panels-oil-on-canvas-49-x-36-5-01.jpg"
+  },
+  {
+    "id": "p-holy-cow-oil-on-canvas-42-x-48-01",
+    "title": "Holy Cow",
+    "medium": "oil on canvas",
+    "size": "42\" x 48\"",
+    "category": "painting",
+    "px": 480,
+    "file": "p-holy-cow-oil-on-canvas-42-x-48-01.jpg"
+  },
+  {
+    "id": "p-inception-oil-on-canvas-48-x-36-01",
+    "title": "Inception",
+    "medium": "oil on canvas",
+    "size": "48\" x 36\"",
+    "category": "painting",
+    "px": 480,
+    "file": "p-inception-oil-on-canvas-48-x-36-01.jpg"
+  },
+  {
+    "id": "p-joining-forces-oil-on-canvas-79-x-59-01",
+    "title": "Joining Forces",
+    "medium": "oil on canvas",
+    "size": "79\" x 59\"",
+    "category": "painting",
+    "px": 3264,
+    "file": "p-joining-forces-oil-on-canvas-79-x-59-01.jpg"
+  },
+  {
+    "id": "p-night-moves-oil-on-canvas-38-x-51-01",
+    "title": "Night Moves",
+    "medium": "oil on canvas",
+    "size": "38\" x 51\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-night-moves-oil-on-canvas-38-x-51-01.jpg"
+  },
+  {
+    "id": "p-painting-59-01",
+    "title": "Painting 59",
+    "medium": "",
+    "size": "",
+    "category": "painting",
+    "px": 480,
+    "file": "p-painting-59-01.jpg"
+  },
+  {
+    "id": "p-rhythm-in-the-jungle-triptych-1-of-3-oil-on-canvas-90-x-40-01",
+    "title": "Rhythm in the Jungle · Triptych (1 of 3)",
+    "medium": "oil on canvas",
+    "size": "90\" x 40\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-rhythm-in-the-jungle-triptych-1-of-3-oil-on-canvas-90-x-40-01.jpg"
+  },
+  {
+    "id": "p-rhythm-in-the-jungle-triptych-2-of-3-oil-on-canvas-90-x-40-01",
+    "title": "Rhythm in the Jungle · Triptych (2 of 3)",
+    "medium": "oil on canvas",
+    "size": "90\" x 40\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-rhythm-in-the-jungle-triptych-2-of-3-oil-on-canvas-90-x-40-01.jpg"
+  },
+  {
+    "id": "p-rhythm-in-the-jungle-triptych-3-of-3-oil-on-canvas-90-x-40-01",
+    "title": "Rhythm in the Jungle · Triptych (3 of 3)",
+    "medium": "oil on canvas",
+    "size": "90\" x 40\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-rhythm-in-the-jungle-triptych-3-of-3-oil-on-canvas-90-x-40-01.jpg"
+  },
+  {
+    "id": "p-tree-1-oil-on-canvas-41-x-60-01",
+    "title": "Tree 1",
+    "medium": "oil on canvas",
+    "size": "41\" x 60\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-tree-1-oil-on-canvas-41-x-60-01.jpg"
+  },
+  {
+    "id": "p-tree-2-oil-on-canvas-50-x-61-01",
+    "title": "Tree 2",
+    "medium": "oil on canvas",
+    "size": "50\"x 61\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-tree-2-oil-on-canvas-50-x-61-01.jpg"
+  },
+  {
+    "id": "p-tree-of-life-oil-on-canvas-24-x-29-01",
+    "title": "Tree of Life",
+    "medium": "oil on canvas",
+    "size": "24\" x 29\"",
+    "category": "painting",
+    "px": 1200,
+    "file": "p-tree-of-life-oil-on-canvas-24-x-29-01.jpg"
+  },
+  {
+    "id": "p-vegetative-state-9-panels-oil-on-canvas-86-x-74-01",
+    "title": "Vegetative State · 9 Panels",
+    "medium": "oil on canvas",
+    "size": "86\" x 74\"",
+    "category": "painting",
+    "px": 1259,
+    "file": "p-vegetative-state-9-panels-oil-on-canvas-86-x-74-01.jpg"
+  },
+  {
+    "id": "s-2010-piece-a-01",
+    "title": "2010 Piece A",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 275,
+    "file": "s-2010-piece-a-01.jpg"
+  },
+  {
+    "id": "s-2010-piece-b-01",
+    "title": "2010 Piece B",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 2178,
+    "file": "s-2010-piece-b-01.jpg"
+  },
+  {
+    "id": "s-2011-piece-a-01",
+    "title": "2011 Piece A",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 2466,
+    "file": "s-2011-piece-a-01.jpg"
+  },
+  {
+    "id": "s-2011-piece-b-01",
+    "title": "2011 Piece B",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 2247,
+    "file": "s-2011-piece-b-01.jpg"
+  },
+  {
+    "id": "s-2012-01",
+    "title": "2012",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3708,
+    "file": "s-2012-01.jpg"
+  },
+  {
+    "id": "s-2012-02",
+    "title": "2012 · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3708,
+    "file": "s-2012-02.jpg"
+  },
+  {
+    "id": "s-2015-01",
+    "title": "2015",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 940,
+    "file": "s-2015-01.jpg"
+  },
+  {
+    "id": "s-2015-02",
+    "title": "2015 · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 920,
+    "file": "s-2015-02.jpg"
+  },
+  {
+    "id": "s-2015-03",
+    "title": "2015 · 3",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 940,
+    "file": "s-2015-03.jpg"
+  },
+  {
+    "id": "s-anemone-01",
+    "title": "Anemone",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 480,
+    "file": "s-anemone-01.jpg"
+  },
+  {
+    "id": "s-anemone-02",
+    "title": "Anemone · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 300,
+    "file": "s-anemone-02.jpg"
+  },
+  {
+    "id": "s-anemone-03",
+    "title": "Anemone · 3",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 4608,
+    "file": "s-anemone-03.jpg"
+  },
+  {
+    "id": "s-blooming-01",
+    "title": "Blooming",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-blooming-01.jpg"
+  },
+  {
+    "id": "s-blooming-02",
+    "title": "Blooming · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5602,
+    "file": "s-blooming-02.jpg"
+  },
+  {
+    "id": "s-brain-coral-01",
+    "title": "Brain Coral",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-brain-coral-01.jpg"
+  },
+  {
+    "id": "s-claw-01",
+    "title": "Claw",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 4608,
+    "file": "s-claw-01.jpg"
+  },
+  {
+    "id": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-01",
+    "title": "Continuity Wave Back",
+    "medium": "stoneware",
+    "size": "7\"H x 12\"W x 10\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-01.jpg"
+  },
+  {
+    "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01",
+    "title": "Continuity Wave",
+    "medium": "stoneware",
+    "size": "7\"H x 12\"W x 10\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01.jpg"
+  },
+  {
+    "id": "s-continuity-waves-white-01",
+    "title": "Continuity Waves White",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 6000,
+    "file": "s-continuity-waves-white-01.jpg"
+  },
+  {
+    "id": "s-continuity-waves-white-02",
+    "title": "Continuity Waves White · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 6000,
+    "file": "s-continuity-waves-white-02.jpg"
+  },
+  {
+    "id": "s-continuity-waves-white-03",
+    "title": "Continuity Waves White · 3",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 6000,
+    "file": "s-continuity-waves-white-03.jpg"
+  },
+  {
+    "id": "s-cookie-dough-01",
+    "title": "Cookie Dough",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 4872,
+    "file": "s-cookie-dough-01.jpg"
+  },
+  {
+    "id": "s-cream-organic-01",
+    "title": "Cream Organic",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3264,
+    "file": "s-cream-organic-01.jpg"
+  },
+  {
+    "id": "s-cresting-stoneware-8-h-x-11-w-x-9-d-01",
+    "title": "Cresting",
+    "medium": "stoneware",
+    "size": "8\"H x 11\"W x 9\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-cresting-stoneware-8-h-x-11-w-x-9-d-01.jpg"
+  },
+  {
+    "id": "s-emerging-paper-clay-7-h-x-7-w-x-4-5-d-01",
+    "title": "Emerging",
+    "medium": "paper clay",
+    "size": "7\"H x 7\"W x 4.5\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-emerging-paper-clay-7-h-x-7-w-x-4-5-d-01.jpg"
+  },
+  {
+    "id": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-01",
+    "title": "Escaping",
+    "medium": "paper clay, wire chain",
+    "size": "5\"H x 6\"W x 5\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-01.jpg"
+  },
+  {
+    "id": "s-fear-paper-clay-18-h-x-18-w-x-19-d-01",
+    "title": "Fear",
+    "medium": "paper clay",
+    "size": "18\"H x 18\"W x 19\"D",
+    "category": "sculpture",
+    "px": 2436,
+    "file": "s-fear-paper-clay-18-h-x-18-w-x-19-d-01.jpg"
+  },
+  {
+    "id": "s-fear-paper-clay-18-h-x-18-w-x-19-d-02",
+    "title": "Fear · 2",
+    "medium": "paper clay",
+    "size": "18\"H x 18\"W x 19\"D",
+    "category": "sculpture",
+    "px": 4000,
+    "file": "s-fear-paper-clay-18-h-x-18-w-x-19-d-02.jpg"
+  },
+  {
+    "id": "s-fear-paper-clay-18-h-x-18-w-x-19-d-03",
+    "title": "Fear · 3",
+    "medium": "paper clay",
+    "size": "18\"H x 18\"W x 19\"D",
+    "category": "sculpture",
+    "px": 2500,
+    "file": "s-fear-paper-clay-18-h-x-18-w-x-19-d-03.jpg"
+  },
+  {
+    "id": "s-guarded-paper-clay-6-h-x-3-5-w-x-5-5-d-01",
+    "title": "Guarded",
+    "medium": "paper clay",
+    "size": "6\"H x 3.5\"W x 5.5\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-guarded-paper-clay-6-h-x-3-5-w-x-5-5-d-01.jpg"
+  },
+  {
+    "id": "s-heavy-are-my-memories-01",
+    "title": "Heavy Are My Memories",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3403,
+    "file": "s-heavy-are-my-memories-01.jpg"
+  },
+  {
+    "id": "s-jambalaya-paper-clay-13-h-x-12-w-x-12-5-d-01",
+    "title": "Jambalaya",
+    "medium": "paper clay",
+    "size": "13\"H x 12\"W x 12.5\"D",
+    "category": "sculpture",
+    "px": 400,
+    "file": "s-jambalaya-paper-clay-13-h-x-12-w-x-12-5-d-01.png"
+  },
+  {
+    "id": "s-lemon-swirl-01",
+    "title": "Lemon Swirl",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 4608,
+    "file": "s-lemon-swirl-01.jpg"
+  },
+  {
+    "id": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-01",
+    "title": "Lollygag",
+    "medium": "paper clay",
+    "size": "12\"H x 18\"W x 10\"D",
+    "category": "sculpture",
+    "px": 4288,
+    "file": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-01.jpg"
+  },
+  {
+    "id": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-02",
+    "title": "Lollygag · 2",
+    "medium": "paper clay",
+    "size": "12\"H x 18\"W x 10\"D",
+    "category": "sculpture",
+    "px": 1365,
+    "file": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-02.jpg"
+  },
+  {
+    "id": "s-opening-stoneware-7-5-h-x-10-w-x-7-d-01",
+    "title": "Opening",
+    "medium": "stoneware",
+    "size": "7.5\"H x 10\"W x 7\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-opening-stoneware-7-5-h-x-10-w-x-7-d-01.jpg"
+  },
+  {
+    "id": "s-orange-blossom-paper-clay-10-h-x-15-5-w-x-11-d-01",
+    "title": "Orange Blossom",
+    "medium": "paper clay",
+    "size": "10\"H x 15.5\"W x 11\"D",
+    "category": "sculpture",
+    "px": 381,
+    "file": "s-orange-blossom-paper-clay-10-h-x-15-5-w-x-11-d-01.png"
+  },
+  {
+    "id": "s-organic-split-paper-clay-17-h-x-11-5-w-x-13-d-01",
+    "title": "Organic Split",
+    "medium": "paper clay",
+    "size": "17\"H x 11.5\"W x 13\"D",
+    "category": "sculpture",
+    "px": 500,
+    "file": "s-organic-split-paper-clay-17-h-x-11-5-w-x-13-d-01.png"
+  },
+  {
+    "id": "s-red-bowl-01",
+    "title": "Red Bowl",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3264,
+    "file": "s-red-bowl-01.jpg"
+  },
+  {
+    "id": "s-red-bowl-02",
+    "title": "Red Bowl · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3264,
+    "file": "s-red-bowl-02.jpg"
+  },
+  {
+    "id": "s-redefinition-stoneware-8-h-x-11-w-x-12-d-01",
+    "title": "Redefinition",
+    "medium": "stoneware",
+    "size": "8\"H x 11\"W x 12\"D",
+    "category": "sculpture",
+    "px": 850,
+    "file": "s-redefinition-stoneware-8-h-x-11-w-x-12-d-01.jpg"
+  },
+  {
+    "id": "s-ripple-fortune-cookie-01",
+    "title": "Ripple Fortune Cookie",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5534,
+    "file": "s-ripple-fortune-cookie-01.jpg"
+  },
+  {
+    "id": "s-ripple-fortune-cookie-02",
+    "title": "Ripple Fortune Cookie · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 6000,
+    "file": "s-ripple-fortune-cookie-02.jpg"
+  },
+  {
+    "id": "s-ripple-fortune-cookie-03",
+    "title": "Ripple Fortune Cookie · 3",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5348,
+    "file": "s-ripple-fortune-cookie-03.jpg"
+  },
+  {
+    "id": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-01",
+    "title": "Searching",
+    "medium": "paper clay",
+    "size": "4.5\"H x 7.5\"W x 6.5\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-01.jpg"
+  },
+  {
+    "id": "s-self-wrapping-paper-clay-13-h-x-12-w-x-11-d-01",
+    "title": "Self Wrapping",
+    "medium": "paper clay",
+    "size": "13\"H x 12\"W x 11\"D",
+    "category": "sculpture",
+    "px": 436,
+    "file": "s-self-wrapping-paper-clay-13-h-x-12-w-x-11-d-01.png"
+  },
+  {
+    "id": "s-surging-stoneware-7-h-x-13-w-x-9-d-01",
+    "title": "Surging",
+    "medium": "stoneware",
+    "size": "7\"H x 13\"W x 9\"D",
+    "category": "sculpture",
+    "px": 1200,
+    "file": "s-surging-stoneware-7-h-x-13-w-x-9-d-01.jpg"
+  },
+  {
+    "id": "s-the-goose-is-dead-01",
+    "title": "The Goose Is Dead",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 1440,
+    "file": "s-the-goose-is-dead-01.jpg"
+  },
+  {
+    "id": "s-tipping-point-stoneware-10-h-x-9-w-x-8-d-01",
+    "title": "Tipping Point",
+    "medium": "stoneware",
+    "size": "10\"H x 9\"W x 8\"D",
+    "category": "sculpture",
+    "px": 880,
+    "file": "s-tipping-point-stoneware-10-h-x-9-w-x-8-d-01.jpg"
+  },
+  {
+    "id": "s-unruffled-warrior-01",
+    "title": "Unruffled Warrior",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 2272,
+    "file": "s-unruffled-warrior-01.jpg"
+  },
+  {
+    "id": "s-untitled-01",
+    "title": "Untitled",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-untitled-01.jpg"
+  },
+  {
+    "id": "s-untitled-02",
+    "title": "Untitled · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5427,
+    "file": "s-untitled-02.jpg"
+  },
+  {
+    "id": "s-untitled-03",
+    "title": "Untitled · 3",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-untitled-03.jpg"
+  },
+  {
+    "id": "s-untitled-04",
+    "title": "Untitled · 4",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5960,
+    "file": "s-untitled-04.jpg"
+  },
+  {
+    "id": "s-white-coral-01",
+    "title": "White Coral",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3264,
+    "file": "s-white-coral-01.jpg"
+  },
+  {
+    "id": "s-white-coral-02",
+    "title": "White Coral · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3264,
+    "file": "s-white-coral-02.jpg"
+  },
+  {
+    "id": "s-white-coral-03",
+    "title": "White Coral · 3",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3264,
+    "file": "s-white-coral-03.jpg"
+  },
+  {
+    "id": "s-woman-exterior-01",
+    "title": "Woman Exterior",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 4000,
+    "file": "s-woman-exterior-01.jpg"
+  },
+  {
+    "id": "s-woman-interior-01",
+    "title": "Woman Interior",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 4000,
+    "file": "s-woman-interior-01.jpg"
+  },
+  {
+    "id": "s-yellow-flower-01",
+    "title": "Yellow Flower",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 4512,
+    "file": "s-yellow-flower-01.jpg"
+  },
+  {
+    "id": "s-yellow-flower-02",
+    "title": "Yellow Flower · 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5183,
+    "file": "s-yellow-flower-02.jpg"
+  }
+]
