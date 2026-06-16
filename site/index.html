@@ -1060,9 +1060,8 @@
     display: flex; flex-direction: column; justify-content: flex-end;
     padding: clamp(16px, 1.8vw, 28px);
     background: linear-gradient(to top, rgba(8,7,6,0.80) 0%, rgba(8,7,6,0.10) 42%, transparent 70%);
-    opacity: 0; transition: opacity 420ms var(--ease-out, ease);
+    opacity: 1;
   }
-  .tile:hover figcaption, .gcard:hover figcaption { opacity: 1; }
   .cap-cat {
     font-family: var(--font-ui, 'DM Sans', sans-serif);
     font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
@@ -1356,7 +1355,6 @@
   @media (max-width: 760px) {
     .panel { grid-template-columns: 1fr; grid-template-rows: repeat(auto-fill, minmax(48vh, 1fr)); height: auto; }
     .panel .tile { grid-column: 1 / -1 !important; grid-row: auto !important; min-height: 52vh; }
-    figcaption { opacity: 1; }
   }
 
   /* ── Static SEO fallback (replaced once JS loads) ─────────── */
