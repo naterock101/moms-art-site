@@ -266,26 +266,17 @@
     "medium": "",
     "size": "",
     "category": "sculpture",
-    "px": 5176,
+    "px": 5602,
     "file": "s-blooming-01.jpg"
   },
   {
-    "id": "s-blooming-02",
-    "title": "Blooming \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 5602,
-    "file": "s-blooming-02.jpg"
-  },
-  {
-    "id": "s-brain-coral-01",
-    "title": "Brain Coral",
-    "medium": "",
-    "size": "",
+    "id": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-02",
+    "title": "Searching \u00b7 2",
+    "medium": "paper clay",
+    "size": "4.5\"H x 7.5\"W x 6.5\"D",
     "category": "sculpture",
     "px": 5176,
-    "file": "s-brain-coral-01.jpg"
+    "file": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-02.jpg"
   },
   {
     "id": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-02",
@@ -322,24 +313,6 @@
     "category": "sculpture",
     "px": 6000,
     "file": "s-continuity-waves-white-01.jpg"
-  },
-  {
-    "id": "s-continuity-waves-white-02",
-    "title": "Continuity Waves White \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 6000,
-    "file": "s-continuity-waves-white-02.jpg"
-  },
-  {
-    "id": "s-continuity-waves-white-03",
-    "title": "Continuity Waves White \u00b7 3",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 6000,
-    "file": "s-continuity-waves-white-03.jpg"
   },
   {
     "id": "s-cookie-dough-01",
@@ -524,8 +497,8 @@
   {
     "id": "s-ripple-fortune-cookie-01",
     "title": "Ripple Fortune Cookie",
-    "medium": "",
-    "size": "",
+    "medium": "stoneware",
+    "size": "7\"H x 13\"W x 9\"D",
     "category": "sculpture",
     "px": 5534,
     "file": "s-ripple-fortune-cookie-01.jpg"
@@ -533,8 +506,8 @@
   {
     "id": "s-ripple-fortune-cookie-02",
     "title": "Ripple Fortune Cookie \u00b7 2",
-    "medium": "",
-    "size": "",
+    "medium": "stoneware",
+    "size": "7\"H x 13\"W x 9\"D",
     "category": "sculpture",
     "px": 6000,
     "file": "s-ripple-fortune-cookie-02.jpg"
@@ -542,8 +515,8 @@
   {
     "id": "s-ripple-fortune-cookie-03",
     "title": "Ripple Fortune Cookie \u00b7 3",
-    "medium": "",
-    "size": "",
+    "medium": "stoneware",
+    "size": "7\"H x 13\"W x 9\"D",
     "category": "sculpture",
     "px": 5348,
     "file": "s-ripple-fortune-cookie-03.jpg"
@@ -565,15 +538,6 @@
     "category": "sculpture",
     "px": 436,
     "file": "s-self-wrapping-paper-clay-13-h-x-12-w-x-11-d-01.png"
-  },
-  {
-    "id": "s-surging-stoneware-7-h-x-13-w-x-9-d-01",
-    "title": "Surging",
-    "medium": "stoneware",
-    "size": "7\"H x 13\"W x 9\"D",
-    "category": "sculpture",
-    "px": 1200,
-    "file": "s-surging-stoneware-7-h-x-13-w-x-9-d-01.jpg"
   },
   {
     "id": "s-the-goose-is-dead-01",
@@ -700,5 +664,32 @@
     "category": "sculpture",
     "px": 5183,
     "file": "s-yellow-flower-02.jpg"
+  },
+  {
+    "id": "s-cresting-stoneware-8-h-x-11-w-x-9-d-02",
+    "title": "Cresting \u00b7 2",
+    "medium": "stoneware",
+    "size": "8\"H x 11\"W x 9\"D",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-cresting-stoneware-8-h-x-11-w-x-9-d-02.jpg"
+  },
+  {
+    "id": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02",
+    "title": "Continuity Wave Back \u00b7 2",
+    "medium": "stoneware",
+    "size": "7\"H x 12\"W x 10\"D",
+    "category": "sculpture",
+    "px": 6000,
+    "file": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02.jpg"
+  },
+  {
+    "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02",
+    "title": "Continuity Wave \u00b7 2",
+    "medium": "stoneware",
+    "size": "7\"H x 12\"W x 10\"D",
+    "category": "sculpture",
+    "px": 6000,
+    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02.jpg"
   }
 ]
