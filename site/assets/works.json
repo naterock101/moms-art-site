@@ -162,78 +162,6 @@
     "file": "s-2010-two-faces-a-01.jpg"
   },
   {
-    "id": "s-cinnamon-swirl-01",
-    "title": "Cinnamon Swirl",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 2178,
-    "file": "s-cinnamon-swirl-01.jpg"
-  },
-  {
-    "id": "s-scaled-bloom-01",
-    "title": "Scaled Bloom",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 2466,
-    "file": "s-scaled-bloom-01.jpg"
-  },
-  {
-    "id": "s-wild-rose-01",
-    "title": "Wild Rose",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 2247,
-    "file": "s-wild-rose-01.jpg"
-  },
-  {
-    "id": "s-rooted-bloom-01",
-    "title": "Rooted Bloom",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 3708,
-    "file": "s-rooted-bloom-01.jpg"
-  },
-  {
-    "id": "s-rooted-bloom-02",
-    "title": "Rooted Bloom \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 3708,
-    "file": "s-rooted-bloom-02.jpg"
-  },
-  {
-    "id": "s-tangled-knot-01",
-    "title": "Tangled Knot",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 940,
-    "file": "s-tangled-knot-01.jpg"
-  },
-  {
-    "id": "s-tangled-knot-02",
-    "title": "Tangled Knot \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 920,
-    "file": "s-tangled-knot-02.jpg"
-  },
-  {
-    "id": "s-unfurling-01",
-    "title": "Unfurling",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 940,
-    "file": "s-unfurling-01.jpg"
-  },
-  {
     "id": "s-anemone-01",
     "title": "Anemone",
     "medium": "",
@@ -270,22 +198,22 @@
     "file": "s-blooming-01.jpg"
   },
   {
-    "id": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-02",
-    "title": "Searching \u00b7 2",
-    "medium": "paper clay",
-    "size": "4.5\"H x 7.5\"W x 6.5\"D",
+    "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01",
+    "title": "Continuity Wave",
+    "medium": "stoneware",
+    "size": "7\"H x 12\"W x 10\"D",
     "category": "sculpture",
-    "px": 5176,
-    "file": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-02.jpg"
+    "px": 1200,
+    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01.jpg"
   },
   {
-    "id": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-02",
-    "title": "Escaping \u00b7 2",
-    "medium": "paper clay, wire chain",
-    "size": "5\"H x 6\"W x 5\"D",
+    "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02",
+    "title": "Continuity Wave \u00b7 2",
+    "medium": "stoneware",
+    "size": "7\"H x 12\"W x 10\"D",
     "category": "sculpture",
-    "px": 4608,
-    "file": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-02.jpg"
+    "px": 6000,
+    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02.jpg"
   },
   {
     "id": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-01",
@@ -297,13 +225,13 @@
     "file": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-01.jpg"
   },
   {
-    "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01",
-    "title": "Continuity Wave",
+    "id": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02",
+    "title": "Continuity Wave Back \u00b7 2",
     "medium": "stoneware",
     "size": "7\"H x 12\"W x 10\"D",
     "category": "sculpture",
-    "px": 1200,
-    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01.jpg"
+    "px": 6000,
+    "file": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02.jpg"
   },
   {
     "id": "s-continuity-waves-white-01",
@@ -324,6 +252,33 @@
     "file": "s-cookie-dough-01.jpg"
   },
   {
+    "id": "s-copper-cradle-01",
+    "title": "Copper Cradle",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-copper-cradle-01.jpg"
+  },
+  {
+    "id": "s-copper-cradle-02",
+    "title": "Copper Cradle \u00b7 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-copper-cradle-02.jpg"
+  },
+  {
+    "id": "s-copper-cradle-03",
+    "title": "Copper Cradle \u00b7 3",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5960,
+    "file": "s-copper-cradle-03.jpg"
+  },
+  {
     "id": "s-cream-organic-01",
     "title": "Cream Organic",
     "medium": "",
@@ -342,6 +297,15 @@
     "file": "s-cresting-stoneware-8-h-x-11-w-x-9-d-01.jpg"
   },
   {
+    "id": "s-cresting-stoneware-8-h-x-11-w-x-9-d-02",
+    "title": "Cresting \u00b7 2",
+    "medium": "stoneware",
+    "size": "8\"H x 11\"W x 9\"D",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-cresting-stoneware-8-h-x-11-w-x-9-d-02.jpg"
+  },
+  {
     "id": "s-emerging-paper-clay-7-h-x-7-w-x-4-5-d-01",
     "title": "Emerging",
     "medium": "paper clay",
@@ -358,6 +322,15 @@
     "category": "sculpture",
     "px": 1200,
     "file": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-01.jpg"
+  },
+  {
+    "id": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-02",
+    "title": "Escaping \u00b7 2",
+    "medium": "paper clay, wire chain",
+    "size": "5\"H x 6\"W x 5\"D",
+    "category": "sculpture",
+    "px": 4608,
+    "file": "s-escaping-paper-clay-wire-chain-5-h-x-6-w-x-5-d-02.jpg"
   },
   {
     "id": "s-fear-paper-clay-18-h-x-18-w-x-19-d-01",
@@ -403,6 +376,15 @@
     "category": "sculpture",
     "px": 3403,
     "file": "s-heavy-are-my-memories-01.jpg"
+  },
+  {
+    "id": "s-indigo-bloom-01",
+    "title": "Indigo Bloom",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 5427,
+    "file": "s-indigo-bloom-01.jpg"
   },
   {
     "id": "s-jambalaya-paper-clay-13-h-x-12-w-x-12-5-d-01",
@@ -522,6 +504,33 @@
     "file": "s-ripple-fortune-cookie-03.jpg"
   },
   {
+    "id": "s-rooted-bloom-01",
+    "title": "Rooted Bloom",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3708,
+    "file": "s-rooted-bloom-01.jpg"
+  },
+  {
+    "id": "s-rooted-bloom-02",
+    "title": "Rooted Bloom \u00b7 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 3708,
+    "file": "s-rooted-bloom-02.jpg"
+  },
+  {
+    "id": "s-scaled-bloom-01",
+    "title": "Scaled Bloom",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 2466,
+    "file": "s-scaled-bloom-01.jpg"
+  },
+  {
     "id": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-01",
     "title": "Searching",
     "medium": "paper clay",
@@ -531,6 +540,15 @@
     "file": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-01.jpg"
   },
   {
+    "id": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-02",
+    "title": "Searching \u00b7 2",
+    "medium": "paper clay",
+    "size": "4.5\"H x 7.5\"W x 6.5\"D",
+    "category": "sculpture",
+    "px": 5176,
+    "file": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-02.jpg"
+  },
+  {
     "id": "s-self-wrapping-paper-clay-13-h-x-12-w-x-11-d-01",
     "title": "Self Wrapping",
     "medium": "paper clay",
@@ -538,6 +556,33 @@
     "category": "sculpture",
     "px": 436,
     "file": "s-self-wrapping-paper-clay-13-h-x-12-w-x-11-d-01.png"
+  },
+  {
+    "id": "s-self-wrapping-paper-clay-13-h-x-12-w-x-11-d-02",
+    "title": "Self Wrapping \u00b7 2",
+    "medium": "paper clay",
+    "size": "13\"H x 12\"W x 11\"D",
+    "category": "sculpture",
+    "px": 2178,
+    "file": "s-self-wrapping-paper-clay-13-h-x-12-w-x-11-d-02.jpg"
+  },
+  {
+    "id": "s-tangled-knot-01",
+    "title": "Tangled Knot",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 940,
+    "file": "s-tangled-knot-01.jpg"
+  },
+  {
+    "id": "s-tangled-knot-02",
+    "title": "Tangled Knot \u00b7 2",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 920,
+    "file": "s-tangled-knot-02.jpg"
   },
   {
     "id": "s-the-goose-is-dead-01",
@@ -558,6 +603,15 @@
     "file": "s-tipping-point-stoneware-10-h-x-9-w-x-8-d-01.jpg"
   },
   {
+    "id": "s-unfurling-01",
+    "title": "Unfurling",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 940,
+    "file": "s-unfurling-01.jpg"
+  },
+  {
     "id": "s-unruffled-warrior-01",
     "title": "Unruffled Warrior",
     "medium": "",
@@ -565,42 +619,6 @@
     "category": "sculpture",
     "px": 2272,
     "file": "s-unruffled-warrior-01.jpg"
-  },
-  {
-    "id": "s-copper-cradle-01",
-    "title": "Copper Cradle",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 5176,
-    "file": "s-copper-cradle-01.jpg"
-  },
-  {
-    "id": "s-indigo-bloom-01",
-    "title": "Indigo Bloom",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 5427,
-    "file": "s-indigo-bloom-01.jpg"
-  },
-  {
-    "id": "s-copper-cradle-02",
-    "title": "Copper Cradle \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 5176,
-    "file": "s-copper-cradle-02.jpg"
-  },
-  {
-    "id": "s-copper-cradle-03",
-    "title": "Copper Cradle \u00b7 3",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 5960,
-    "file": "s-copper-cradle-03.jpg"
   },
   {
     "id": "s-white-coral-01",
@@ -628,6 +646,15 @@
     "category": "sculpture",
     "px": 3264,
     "file": "s-white-coral-03.jpg"
+  },
+  {
+    "id": "s-wild-rose-01",
+    "title": "Wild Rose",
+    "medium": "",
+    "size": "",
+    "category": "sculpture",
+    "px": 2247,
+    "file": "s-wild-rose-01.jpg"
   },
   {
     "id": "s-woman-exterior-01",
@@ -664,32 +691,5 @@
     "category": "sculpture",
     "px": 5183,
     "file": "s-yellow-flower-02.jpg"
-  },
-  {
-    "id": "s-cresting-stoneware-8-h-x-11-w-x-9-d-02",
-    "title": "Cresting \u00b7 2",
-    "medium": "stoneware",
-    "size": "8\"H x 11\"W x 9\"D",
-    "category": "sculpture",
-    "px": 5176,
-    "file": "s-cresting-stoneware-8-h-x-11-w-x-9-d-02.jpg"
-  },
-  {
-    "id": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02",
-    "title": "Continuity Wave Back \u00b7 2",
-    "medium": "stoneware",
-    "size": "7\"H x 12\"W x 10\"D",
-    "category": "sculpture",
-    "px": 6000,
-    "file": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02.jpg"
-  },
-  {
-    "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02",
-    "title": "Continuity Wave \u00b7 2",
-    "medium": "stoneware",
-    "size": "7\"H x 12\"W x 10\"D",
-    "category": "sculpture",
-    "px": 6000,
-    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02.jpg"
   }
 ]
