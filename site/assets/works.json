@@ -167,35 +167,8 @@
     "medium": "",
     "size": "",
     "category": "sculpture",
-    "px": 480,
-    "file": "s-anemone-01.jpg"
-  },
-  {
-    "id": "s-anemone-02",
-    "title": "Anemone \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
     "px": 300,
-    "file": "s-anemone-02.jpg"
-  },
-  {
-    "id": "s-anemone-03",
-    "title": "Anemone \u00b7 3",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 4608,
-    "file": "s-anemone-03.jpg"
-  },
-  {
-    "id": "s-blooming-01",
-    "title": "Blooming",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 5602,
-    "file": "s-blooming-01.jpg"
+    "file": "s-anemone-01.jpg"
   },
   {
     "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01",
@@ -203,17 +176,8 @@
     "medium": "stoneware",
     "size": "7\"H x 12\"W x 10\"D",
     "category": "sculpture",
-    "px": 1200,
-    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01.jpg"
-  },
-  {
-    "id": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02",
-    "title": "Continuity Wave \u00b7 2",
-    "medium": "stoneware",
-    "size": "7\"H x 12\"W x 10\"D",
-    "category": "sculpture",
     "px": 6000,
-    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-02.jpg"
+    "file": "s-continuity-wave-stoneware-7-h-x-12-w-x-10-d-01.jpg"
   },
   {
     "id": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-01",
@@ -221,35 +185,8 @@
     "medium": "stoneware",
     "size": "7\"H x 12\"W x 10\"D",
     "category": "sculpture",
-    "px": 1200,
+    "px": 6000,
     "file": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-01.jpg"
-  },
-  {
-    "id": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02",
-    "title": "Continuity Wave Back \u00b7 2",
-    "medium": "stoneware",
-    "size": "7\"H x 12\"W x 10\"D",
-    "category": "sculpture",
-    "px": 6000,
-    "file": "s-continuity-wave-back-stoneware-7-h-x-12-w-x-10-d-02.jpg"
-  },
-  {
-    "id": "s-continuity-waves-white-01",
-    "title": "Continuity Waves White",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 6000,
-    "file": "s-continuity-waves-white-01.jpg"
-  },
-  {
-    "id": "s-cookie-dough-01",
-    "title": "Cookie Dough",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 4872,
-    "file": "s-cookie-dough-01.jpg"
   },
   {
     "id": "s-copper-cradle-01",
@@ -293,7 +230,7 @@
     "medium": "stoneware",
     "size": "8\"H x 11\"W x 9\"D",
     "category": "sculpture",
-    "px": 1200,
+    "px": 5176,
     "file": "s-cresting-stoneware-8-h-x-11-w-x-9-d-01.jpg"
   },
   {
@@ -302,7 +239,7 @@
     "medium": "stoneware",
     "size": "8\"H x 11\"W x 9\"D",
     "category": "sculpture",
-    "px": 5176,
+    "px": 5602,
     "file": "s-cresting-stoneware-8-h-x-11-w-x-9-d-02.jpg"
   },
   {
@@ -378,13 +315,13 @@
     "file": "s-heavy-are-my-memories-01.jpg"
   },
   {
-    "id": "s-indigo-bloom-01",
-    "title": "Indigo Bloom",
+    "id": "s-indigo-movement-01",
+    "title": "Indigo Movement",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 5427,
-    "file": "s-indigo-bloom-01.jpg"
+    "file": "s-indigo-movement-01.jpg"
   },
   {
     "id": "s-jambalaya-paper-clay-13-h-x-12-w-x-12-5-d-01",
@@ -394,6 +331,15 @@
     "category": "sculpture",
     "px": 400,
     "file": "s-jambalaya-paper-clay-13-h-x-12-w-x-12-5-d-01.png"
+  },
+  {
+    "id": "s-jambalaya-paper-clay-13-h-x-12-w-x-12-5-d-02",
+    "title": "Jambalaya \u00b7 2",
+    "medium": "paper clay",
+    "size": "13\"H x 12\"W x 12.5\"D",
+    "category": "sculpture",
+    "px": 2247,
+    "file": "s-jambalaya-paper-clay-13-h-x-12-w-x-12-5-d-02.jpg"
   },
   {
     "id": "s-lemon-swirl-01",
@@ -410,17 +356,8 @@
     "medium": "paper clay",
     "size": "12\"H x 18\"W x 10\"D",
     "category": "sculpture",
-    "px": 4288,
-    "file": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-01.jpg"
-  },
-  {
-    "id": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-02",
-    "title": "Lollygag \u00b7 2",
-    "medium": "paper clay",
-    "size": "12\"H x 18\"W x 10\"D",
-    "category": "sculpture",
     "px": 1365,
-    "file": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-02.jpg"
+    "file": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-01.jpg"
   },
   {
     "id": "s-opening-stoneware-7-5-h-x-10-w-x-7-d-01",
@@ -437,8 +374,17 @@
     "medium": "paper clay",
     "size": "10\"H x 15.5\"W x 11\"D",
     "category": "sculpture",
+    "px": 3708,
+    "file": "s-orange-blossom-paper-clay-10-h-x-15-5-w-x-11-d-01.jpg"
+  },
+  {
+    "id": "s-orange-blossom-paper-clay-10-h-x-15-5-w-x-11-d-02",
+    "title": "Orange Blossom \u00b7 2",
+    "medium": "paper clay",
+    "size": "10\"H x 15.5\"W x 11\"D",
+    "category": "sculpture",
     "px": 381,
-    "file": "s-orange-blossom-paper-clay-10-h-x-15-5-w-x-11-d-01.png"
+    "file": "s-orange-blossom-paper-clay-10-h-x-15-5-w-x-11-d-02.png"
   },
   {
     "id": "s-organic-split-paper-clay-17-h-x-11-5-w-x-13-d-01",
@@ -450,6 +396,15 @@
     "file": "s-organic-split-paper-clay-17-h-x-11-5-w-x-13-d-01.png"
   },
   {
+    "id": "s-organic-split-paper-clay-17-h-x-11-5-w-x-13-d-02",
+    "title": "Organic Split \u00b7 2",
+    "medium": "paper clay",
+    "size": "17\"H x 11.5\"W x 13\"D",
+    "category": "sculpture",
+    "px": 2466,
+    "file": "s-organic-split-paper-clay-17-h-x-11-5-w-x-13-d-02.jpg"
+  },
+  {
     "id": "s-red-bowl-01",
     "title": "Red Bowl",
     "medium": "",
@@ -457,15 +412,6 @@
     "category": "sculpture",
     "px": 3264,
     "file": "s-red-bowl-01.jpg"
-  },
-  {
-    "id": "s-red-bowl-02",
-    "title": "Red Bowl \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 3264,
-    "file": "s-red-bowl-02.jpg"
   },
   {
     "id": "s-redefinition-stoneware-8-h-x-11-w-x-12-d-01",
@@ -502,33 +448,6 @@
     "category": "sculpture",
     "px": 5348,
     "file": "s-ripple-fortune-cookie-03.jpg"
-  },
-  {
-    "id": "s-rooted-bloom-01",
-    "title": "Rooted Bloom",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 3708,
-    "file": "s-rooted-bloom-01.jpg"
-  },
-  {
-    "id": "s-rooted-bloom-02",
-    "title": "Rooted Bloom \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 3708,
-    "file": "s-rooted-bloom-02.jpg"
-  },
-  {
-    "id": "s-scaled-bloom-01",
-    "title": "Scaled Bloom",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 2466,
-    "file": "s-scaled-bloom-01.jpg"
   },
   {
     "id": "s-searching-paper-clay-4-5-h-x-7-5-w-x-6-5-d-01",
@@ -581,7 +500,7 @@
     "medium": "",
     "size": "",
     "category": "sculpture",
-    "px": 920,
+    "px": 4872,
     "file": "s-tangled-knot-02.jpg"
   },
   {
@@ -630,33 +549,6 @@
     "file": "s-white-coral-01.jpg"
   },
   {
-    "id": "s-white-coral-02",
-    "title": "White Coral \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 3264,
-    "file": "s-white-coral-02.jpg"
-  },
-  {
-    "id": "s-white-coral-03",
-    "title": "White Coral \u00b7 3",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 3264,
-    "file": "s-white-coral-03.jpg"
-  },
-  {
-    "id": "s-wild-rose-01",
-    "title": "Wild Rose",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 2247,
-    "file": "s-wild-rose-01.jpg"
-  },
-  {
     "id": "s-woman-exterior-01",
     "title": "Woman Exterior",
     "medium": "",
@@ -682,14 +574,5 @@
     "category": "sculpture",
     "px": 4512,
     "file": "s-yellow-flower-01.jpg"
-  },
-  {
-    "id": "s-yellow-flower-02",
-    "title": "Yellow Flower \u00b7 2",
-    "medium": "",
-    "size": "",
-    "category": "sculpture",
-    "px": 5183,
-    "file": "s-yellow-flower-02.jpg"
   }
 ]
