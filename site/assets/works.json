@@ -37,7 +37,7 @@
   },
   {
     "id": "p-going-with-the-flow-4-panels-oil-on-canvas-49-x-36-5-01",
-    "title": "Going with the Flow · 4 Panels",
+    "title": "Going with the Flow \u00b7 4 Panels",
     "medium": "oil on canvas",
     "size": "49\" x 36.5\"",
     "category": "painting",
@@ -91,7 +91,7 @@
   },
   {
     "id": "p-rhythm-in-the-jungle-triptych-1-of-3-oil-on-canvas-90-x-40-01",
-    "title": "Rhythm in the Jungle · Triptych (1 of 3)",
+    "title": "Rhythm in the Jungle \u00b7 Triptych (1 of 3)",
     "medium": "oil on canvas",
     "size": "90\" x 40\"",
     "category": "painting",
@@ -100,7 +100,7 @@
   },
   {
     "id": "p-rhythm-in-the-jungle-triptych-2-of-3-oil-on-canvas-90-x-40-01",
-    "title": "Rhythm in the Jungle · Triptych (2 of 3)",
+    "title": "Rhythm in the Jungle \u00b7 Triptych (2 of 3)",
     "medium": "oil on canvas",
     "size": "90\" x 40\"",
     "category": "painting",
@@ -109,7 +109,7 @@
   },
   {
     "id": "p-rhythm-in-the-jungle-triptych-3-of-3-oil-on-canvas-90-x-40-01",
-    "title": "Rhythm in the Jungle · Triptych (3 of 3)",
+    "title": "Rhythm in the Jungle \u00b7 Triptych (3 of 3)",
     "medium": "oil on canvas",
     "size": "90\" x 40\"",
     "category": "painting",
@@ -145,7 +145,7 @@
   },
   {
     "id": "p-vegetative-state-9-panels-oil-on-canvas-86-x-74-01",
-    "title": "Vegetative State · 9 Panels",
+    "title": "Vegetative State \u00b7 9 Panels",
     "medium": "oil on canvas",
     "size": "86\" x 74\"",
     "category": "painting",
@@ -153,85 +153,85 @@
     "file": "p-vegetative-state-9-panels-oil-on-canvas-86-x-74-01.jpg"
   },
   {
-    "id": "s-2010-piece-a-01",
-    "title": "2010 Piece A",
+    "id": "s-2010-two-faces-a-01",
+    "title": "2010 Two Faces A",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 275,
-    "file": "s-2010-piece-a-01.jpg"
+    "file": "s-2010-two-faces-a-01.jpg"
   },
   {
-    "id": "s-2010-piece-b-01",
-    "title": "2010 Piece B",
+    "id": "s-cinnamon-swirl-01",
+    "title": "Cinnamon Swirl",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 2178,
-    "file": "s-2010-piece-b-01.jpg"
+    "file": "s-cinnamon-swirl-01.jpg"
   },
   {
-    "id": "s-2011-piece-a-01",
-    "title": "2011 Piece A",
+    "id": "s-scaled-bloom-01",
+    "title": "Scaled Bloom",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 2466,
-    "file": "s-2011-piece-a-01.jpg"
+    "file": "s-scaled-bloom-01.jpg"
   },
   {
-    "id": "s-2011-piece-b-01",
-    "title": "2011 Piece B",
+    "id": "s-wild-rose-01",
+    "title": "Wild Rose",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 2247,
-    "file": "s-2011-piece-b-01.jpg"
+    "file": "s-wild-rose-01.jpg"
   },
   {
-    "id": "s-2012-01",
-    "title": "2012",
+    "id": "s-rooted-bloom-01",
+    "title": "Rooted Bloom",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 3708,
-    "file": "s-2012-01.jpg"
+    "file": "s-rooted-bloom-01.jpg"
   },
   {
-    "id": "s-2012-02",
-    "title": "2012 · 2",
+    "id": "s-rooted-bloom-02",
+    "title": "Rooted Bloom \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 3708,
-    "file": "s-2012-02.jpg"
+    "file": "s-rooted-bloom-02.jpg"
   },
   {
-    "id": "s-2015-01",
-    "title": "2015",
+    "id": "s-tangled-knot-01",
+    "title": "Tangled Knot",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 940,
-    "file": "s-2015-01.jpg"
+    "file": "s-tangled-knot-01.jpg"
   },
   {
-    "id": "s-2015-02",
-    "title": "2015 · 2",
+    "id": "s-tangled-knot-02",
+    "title": "Tangled Knot \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 920,
-    "file": "s-2015-02.jpg"
+    "file": "s-tangled-knot-02.jpg"
   },
   {
-    "id": "s-2015-03",
-    "title": "2015 · 3",
+    "id": "s-unfurling-01",
+    "title": "Unfurling",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 940,
-    "file": "s-2015-03.jpg"
+    "file": "s-unfurling-01.jpg"
   },
   {
     "id": "s-anemone-01",
@@ -244,7 +244,7 @@
   },
   {
     "id": "s-anemone-02",
-    "title": "Anemone · 2",
+    "title": "Anemone \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -253,7 +253,7 @@
   },
   {
     "id": "s-anemone-03",
-    "title": "Anemone · 3",
+    "title": "Anemone \u00b7 3",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -271,7 +271,7 @@
   },
   {
     "id": "s-blooming-02",
-    "title": "Blooming · 2",
+    "title": "Blooming \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -325,7 +325,7 @@
   },
   {
     "id": "s-continuity-waves-white-02",
-    "title": "Continuity Waves White · 2",
+    "title": "Continuity Waves White \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -334,7 +334,7 @@
   },
   {
     "id": "s-continuity-waves-white-03",
-    "title": "Continuity Waves White · 3",
+    "title": "Continuity Waves White \u00b7 3",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -397,7 +397,7 @@
   },
   {
     "id": "s-fear-paper-clay-18-h-x-18-w-x-19-d-02",
-    "title": "Fear · 2",
+    "title": "Fear \u00b7 2",
     "medium": "paper clay",
     "size": "18\"H x 18\"W x 19\"D",
     "category": "sculpture",
@@ -406,7 +406,7 @@
   },
   {
     "id": "s-fear-paper-clay-18-h-x-18-w-x-19-d-03",
-    "title": "Fear · 3",
+    "title": "Fear \u00b7 3",
     "medium": "paper clay",
     "size": "18\"H x 18\"W x 19\"D",
     "category": "sculpture",
@@ -460,7 +460,7 @@
   },
   {
     "id": "s-lollygag-paper-clay-12-h-x-18-w-x-10-d-02",
-    "title": "Lollygag · 2",
+    "title": "Lollygag \u00b7 2",
     "medium": "paper clay",
     "size": "12\"H x 18\"W x 10\"D",
     "category": "sculpture",
@@ -505,7 +505,7 @@
   },
   {
     "id": "s-red-bowl-02",
-    "title": "Red Bowl · 2",
+    "title": "Red Bowl \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -532,7 +532,7 @@
   },
   {
     "id": "s-ripple-fortune-cookie-02",
-    "title": "Ripple Fortune Cookie · 2",
+    "title": "Ripple Fortune Cookie \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -541,7 +541,7 @@
   },
   {
     "id": "s-ripple-fortune-cookie-03",
-    "title": "Ripple Fortune Cookie · 3",
+    "title": "Ripple Fortune Cookie \u00b7 3",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -603,40 +603,40 @@
     "file": "s-unruffled-warrior-01.jpg"
   },
   {
-    "id": "s-untitled-01",
-    "title": "Untitled",
+    "id": "s-copper-cradle-01",
+    "title": "Copper Cradle",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 5176,
-    "file": "s-untitled-01.jpg"
+    "file": "s-copper-cradle-01.jpg"
   },
   {
-    "id": "s-untitled-02",
-    "title": "Untitled · 2",
+    "id": "s-indigo-bloom-01",
+    "title": "Indigo Bloom",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 5427,
-    "file": "s-untitled-02.jpg"
+    "file": "s-indigo-bloom-01.jpg"
   },
   {
-    "id": "s-untitled-03",
-    "title": "Untitled · 3",
+    "id": "s-copper-cradle-02",
+    "title": "Copper Cradle \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 5176,
-    "file": "s-untitled-03.jpg"
+    "file": "s-copper-cradle-02.jpg"
   },
   {
-    "id": "s-untitled-04",
-    "title": "Untitled · 4",
+    "id": "s-copper-cradle-03",
+    "title": "Copper Cradle \u00b7 3",
     "medium": "",
     "size": "",
     "category": "sculpture",
     "px": 5960,
-    "file": "s-untitled-04.jpg"
+    "file": "s-copper-cradle-03.jpg"
   },
   {
     "id": "s-white-coral-01",
@@ -649,7 +649,7 @@
   },
   {
     "id": "s-white-coral-02",
-    "title": "White Coral · 2",
+    "title": "White Coral \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -658,7 +658,7 @@
   },
   {
     "id": "s-white-coral-03",
-    "title": "White Coral · 3",
+    "title": "White Coral \u00b7 3",
     "medium": "",
     "size": "",
     "category": "sculpture",
@@ -694,7 +694,7 @@
   },
   {
     "id": "s-yellow-flower-02",
-    "title": "Yellow Flower · 2",
+    "title": "Yellow Flower \u00b7 2",
     "medium": "",
     "size": "",
     "category": "sculpture",
